@@ -1,1 +1,1 @@
-lukekaas tämä
+Tämä kansio sisältää projektimme suunnitellun
