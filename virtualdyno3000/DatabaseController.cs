@@ -8,5 +8,6 @@ namespace virtualdyno3000
 {
     public static class DatabaseController
     {
+
     }
 }
