@@ -23,6 +23,7 @@ namespace virtualdyno3000
         public MainWindow()
         {
             InitializeComponent();
+            //https://github.com/Microsoft/InteractiveDataDisplay.WPF
 
         }
     }

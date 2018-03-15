@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
         Title="newcarwindow" Height="300" Width="300">
-    <Grid>
-        
-    </Grid>
+    <Grid/>
 </Window>
