@@ -10,7 +10,7 @@ namespace virtualdyno3000
 {
     static class DB
     {
-        private static SqlConnection conn = new SqlConnection("Data Source = mysql.labranet.jamk.fi:3306; Initial Catalog = K9251_3; user=K9251;password=pwd;");
+        private static SqlConnection conn = new SqlConnection("Data Source = mysql.labranet.jamk.fi:3306; Initial Catalog = K9251_3; user=K9251;password=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
 
         public static List<car> LoadCar()
         {
@@ -22,7 +22,7 @@ namespace virtualdyno3000
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cannot open connection ! ");
+                MessageBox.Show("Cannot open connection ! " + ex.ToString());
             }
 
             return cars;
