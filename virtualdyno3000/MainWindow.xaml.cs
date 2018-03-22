@@ -23,6 +23,7 @@ namespace virtualdyno3000
         public MainWindow()
         {
             InitializeComponent();
+            DB.LoadCar();
             //https://github.com/Microsoft/InteractiveDataDisplay.WPF
 
         }
