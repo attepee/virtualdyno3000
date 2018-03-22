@@ -66,6 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="classes.cs" />
     <Compile Include="DatabaseController.cs" />
     <Compile Include="dynowindow.xaml.cs">
       <DependentUpon>dynowindow.xaml</DependentUpon>
