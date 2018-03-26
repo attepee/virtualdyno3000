@@ -13,13 +13,40 @@ namespace virtualdyno3000
     {
         private static MySqlConnection conn = new MySqlConnection("SERVER=mysql.labranet.jamk.fi; DATABASE=K9251_3; UID=K9251;PASSWORD=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
 
-        public static List<car> LoadCar()
+        public static List<car> LoadCar(int id)
         {
             List<car> cars = new List<car>();
 
             try
             {
-                conn.Open();
+                if (conn.State.ToString() == "Closed")
+                {
+                    conn.Open();
+                }
+
+                string query = "SELECT * FROM cartable";
+                List<string> result = new List<string>();
+
+                MySqlCommand get = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = get.ExecuteReader();
+
+                while(dataReader.Read())
+                {
+                    car temp = new car();
+                    temp.id = int.Parse(dataReader["idautot"].ToString());
+                    temp.manufacturer = dataReader["manufacturer"].ToString();
+                    temp.model = dataReader["model"].ToString();
+                    temp.engine = int.Parse(dataReader["engine"].ToString());
+                    temp.year = int.Parse(dataReader["year"].ToString());
+                    temp.camshaft = int.Parse(dataReader["camshaft"].ToString());
+                    temp.piston = int.Parse(dataReader["piston"].ToString());
+                    temp.injectionsystem = int.Parse(dataReader["injectsystem"].ToString());
+                    temp.exhaust = int.Parse(dataReader["exhaust"].ToString());
+                    temp.turbo = int.Parse(dataReader["turbo"].ToString());
+                    temp.block = int.Parse(dataReader["block"].ToString());
+                    temp.broke = int.Parse(dataReader["broke"].ToString());
+                    cars.Add(temp);
+                }
             }
             catch (Exception ex)
             {
@@ -32,6 +59,28 @@ namespace virtualdyno3000
         static bool CreateCar()
         {
             bool result = false;
+            //insert into cartable (manufacturer,model,engine,year,camshaft,piston,injectsystem,exhaust,turbo,block,broke) values ('asd', 'sd', 1,1,1,1,1,1,1,1,1)
+
+
+            /*
+                SqlCommand NewCmd = conn.CreateCommand();
+                NewCmd.Connection = conn;
+                NewCmd.CommandType = CommandType.Text;
+                NewCmd.CommandText = " update supplier set " + " ID = " + "'" + id + "'" + " , NAME = " + "'" + name + "'" + " , BALANCE = " + "'" + balance + "'" + " , PLACE = " + "'" + place + "'" + "  , LOCATION = " + "'" + address + "'" + ",  PHONE = " + "'" + phone + "'" + " , BANK_NAME = " + "'" + bankname + "'" + " , BANK_BRANCH = " + "'" + bankbranch + "'" + ", ACCOUNT_NO = " + "'" + accountno + "'" + " where ID = " + "@id";
+                NewCmd.Parameters.AddWithValue("@id", id);
+                int a = NewCmd.ExecuteNonQuery();
+                conn.Close();
+                if (a == 0)
+                {
+                    //Not updated.
+                }
+
+                else
+                {
+
+                }
+            */
+
             return result;
         }
 
@@ -47,9 +96,20 @@ namespace virtualdyno3000
             return result;
         }
 
-        static List<part> LoadPart()
+        static List<part> LoadPart(int id)
         {
             List<part> parts = new List<part>();
+            try
+            {
+                conn.Open();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot open connection ! " + ex.ToString());
+            }
+
             return parts;
         }
     }
