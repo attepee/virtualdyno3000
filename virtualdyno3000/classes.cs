@@ -19,7 +19,7 @@ namespace virtualdyno3000
         public int exhaust { get; set; }
         public int turbo { get; set; }
         public int block { get; set; }
-        public bool broke { get; set; }
+        public int broke { get; set; }
     }
 
     class part
