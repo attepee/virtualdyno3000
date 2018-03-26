@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 using System.Windows;
 
 namespace virtualdyno3000
 {
     static class DB
     {
-        private static SqlConnection conn = new SqlConnection("Data Source = mysql.labranet.jamk.fi:3306; Initial Catalog = K9251_3; user=K9251;password=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
+        private static MySqlConnection conn = new MySqlConnection("SERVER=mysql.labranet.jamk.fi; DATABASE=K9251_3; UID=K9251;PASSWORD=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
 
         public static List<car> LoadCar()
         {
