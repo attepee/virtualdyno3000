@@ -17,9 +17,9 @@ namespace virtualdyno3000
     /// <summary>
     /// Interaction logic for modwindow.xaml
     /// </summary>
-    public partial class modwindow : Window
+    public partial class ModWindow : Window
     {
-        public modwindow()
+        public ModWindow()
         {
             InitializeComponent();
         }

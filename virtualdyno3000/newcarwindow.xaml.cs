@@ -17,9 +17,9 @@ namespace virtualdyno3000
     /// <summary>
     /// Interaction logic for newcarwindow.xaml
     /// </summary>
-    public partial class newcarwindow : Window
+    public partial class NewCarWindow : Window
     {
-        public newcarwindow()
+        public NewCarWindow()
         {
             InitializeComponent();
         }

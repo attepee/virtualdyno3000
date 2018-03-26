@@ -17,9 +17,9 @@ namespace virtualdyno3000
     /// <summary>
     /// Interaction logic for dynowindow.xaml
     /// </summary>
-    public partial class dynowindow : Window
+    public partial class DynoWindow : Window
     {
-        public dynowindow()
+        public DynoWindow()
         {
             InitializeComponent();
         }
