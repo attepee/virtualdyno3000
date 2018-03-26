@@ -19,6 +19,8 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 * Grafiikan piirtäminen testituloksen mukaan
 * Kokoonpanojen ja testitulosten tallentaminen tietokantaan
 
+![usecase](Images/usecase.png)
+
 #### Käsitemalli
 
 
@@ -27,13 +29,13 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 
 | Tekijä                                              | Vastuu   |
 | --------------------------------------------------- | -------- |
-| [Matti Aho](https://github.com/matti644)            | Vastuu 1 |
-| [Niklas Hietaranta](https://github.com/niklashieta) | Vastuu 2 |
-| [Atte Pekkarinen](https://github.com/attepee)       | Vastuu 3 |
+| [Matti Aho](https://github.com/matti644)            |  |
+| [Niklas Hietaranta](https://github.com/niklashieta) |  |
+| [Atte Pekkarinen](https://github.com/attepee)       | Dokumentaatio |
 
 #### Työaikasuunnitelma
 
 | Työn osa | Valmis |
 | - | - |
-| Speksi | Viim. 8.4. |
-| Harjoitustyö | Viim. 25.4. |
+| Suunnitelma | 8.4. |
+| Harjoitustyö | 25.4. |
