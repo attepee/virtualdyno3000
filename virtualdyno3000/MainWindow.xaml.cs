@@ -23,8 +23,11 @@ namespace virtualdyno3000
         public MainWindow()
         {
             InitializeComponent();
-            List<car> cars = new List<car>();
+            List<Car> cars = new List<Car>();
             cars = DB.LoadCar();
+
+            carGrid.ItemsSource = cars;
+
             //https://github.com/Microsoft/InteractiveDataDisplay.WPF
 
         }

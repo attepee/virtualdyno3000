@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace virtualdyno3000
 {
-    class car
+    class Car
     {
         public int id { get; set; }
         public string manufacturer { get; set; }
@@ -22,7 +22,7 @@ namespace virtualdyno3000
         public int broke { get; set; }
     }
 
-    class part
+    class Part
     {
         public int id { get; set; }
         public string manufacturer { get; set; }
