@@ -10,7 +10,7 @@ Autoista ja niiden tuunaamisesta kiinnostuneet.
 
 #### Käyttöympäristö ja teknologiat
 
-Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sovelluksen toteutukseen käytetään C#-kieltä ja WPF-kirjastoa. Tarvittavan tiedon tallentamiseen käytetään MySQL-tietokantaa.
+Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sovelluksen toteutukseen käytetään C#-kieltä ja WPF-kirjastoa. Tarvittavan tiedon tallentamiseen käytetään Labranetin palvelimilla sijaitsevaa MySQL-tietokantaa.
 
 #### Toiminnot
 
@@ -29,9 +29,9 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 
 | Tekijä                                              | Vastuu   |
 | --------------------------------------------------- | -------- |
-| [Matti Aho](https://github.com/matti644)            |  |
-| [Niklas Hietaranta](https://github.com/niklashieta) |  |
-| [Atte Pekkarinen](https://github.com/attepee)       | Dokumentaatio |
+| [Matti Aho](https://github.com/matti644)            | Tietokantayhteys |
+| [Niklas Hietaranta](https://github.com/niklashieta) | Tulosten grafiikka |
+| [Atte Pekkarinen](https://github.com/attepee)       | Dokumentaatio      |
 
 #### Työaikasuunnitelma
 
