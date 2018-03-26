@@ -62,7 +62,7 @@ namespace virtualdyno3000
             return cars;
         }
 
-        static bool CreateCar()
+        static bool CreateCar(Car newCar)
         {
             bool result = false;
             //insert into cartable (manufacturer,model,engine,year,camshaft,piston,injectsystem,exhaust,turbo,block,broke) values ('asd', 'sd', 1,1,1,1,1,1,1,1,1)

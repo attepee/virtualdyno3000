@@ -9,10 +9,6 @@
     <Grid>
         <DataGrid x:Name="carGrid" HorizontalAlignment="Left" Height="169" Margin="116,10,0,0" VerticalAlignment="Top" Width="391">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="45" Header="Car id" Binding="{Binding id}"/>
-                <DataGridTextColumn Width="150" Header="Manufacturer" Binding="{Binding manufacturer}"/>
-                <DataGridTextColumn Width="150" Header="Model" Binding="{Binding model}"/>
-                <DataGridTextColumn Width="45" Header="State" Binding="{Binding broke}"/>
             </DataGrid.Columns>
         </DataGrid>
 
