@@ -24,7 +24,7 @@ namespace virtualdyno3000
         {
             InitializeComponent();
             List<car> cars = new List<car>();
-            cars = DB.LoadCar(0);
+            cars = DB.LoadCar();
             //https://github.com/Microsoft/InteractiveDataDisplay.WPF
 
         }

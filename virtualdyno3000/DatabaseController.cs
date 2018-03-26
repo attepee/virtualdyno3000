@@ -13,7 +13,7 @@ namespace virtualdyno3000
     {
         private static MySqlConnection conn = new MySqlConnection("SERVER=mysql.labranet.jamk.fi; DATABASE=K9251_3; UID=K9251;PASSWORD=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
 
-        public static List<car> LoadCar(int id)
+        public static List<car> LoadCar(int id = 0)
         {
             List<car> cars = new List<car>();
 
@@ -25,6 +25,12 @@ namespace virtualdyno3000
                 }
 
                 string query = "SELECT * FROM cartable";
+
+                if (id != 0)
+                {
+                    query = "SELECT " + id + " FROM cartable";
+                }
+
                 List<string> result = new List<string>();
 
                 MySqlCommand get = new MySqlCommand(query, conn);
