@@ -6,15 +6,18 @@ Auto aiheinen sovellus, jolla voidaan koota auton kokoonpano valittavissa olevis
 
 #### Kohdeyleisö
 
-Autotoista ja niiden tuunaamisesta kiinnostuneet.
+Autoista ja niiden tuunaamisesta kiinnostuneet.
 
 #### Käyttöympäristö ja teknologiat
 
-Sovelluksen toteutukseen käytetään C##-kieltä ja WPF-kirjastoa. Tarvittavan tiedon tallentamiseen käytetään MySQL-tietokantaa.
+Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sovelluksen toteutukseen käytetään C#-kieltä ja WPF-kirjastoa. Tarvittavan tiedon tallentamiseen käytetään MySQL-tietokantaa.
 
 #### Toiminnot
 
-
+* Kokoonpanon kasaaminen valittavissa olevista osista
+* Kasatun kokoonpanon testaaminen
+* Grafiikan piirtäminen testituloksen mukaan
+* Kokoonpanojen ja testitulosten tallentaminen tietokantaan
 
 #### Käsitemalli
 
