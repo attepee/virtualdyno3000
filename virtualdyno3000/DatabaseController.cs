@@ -13,9 +13,9 @@ namespace virtualdyno3000
     {
         private static MySqlConnection conn = new MySqlConnection("SERVER=mysql.labranet.jamk.fi; DATABASE=K9251_3; UID=K9251;PASSWORD=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
 
-        public static List<car> LoadCar(int id = 0)
+        public static List<Car> LoadCar(int id = 0)
         {
-            List<car> cars = new List<car>();
+            List<Car> cars = new List<Car>();
 
             try
             {
@@ -38,7 +38,7 @@ namespace virtualdyno3000
 
                 while(dataReader.Read())
                 {
-                    car temp = new car();
+                    Car temp = new Car();
                     temp.id = int.Parse(dataReader["idautot"].ToString());
                     temp.manufacturer = dataReader["manufacturer"].ToString();
                     temp.model = dataReader["model"].ToString();
@@ -102,9 +102,9 @@ namespace virtualdyno3000
             return result;
         }
 
-        static List<part> LoadPart(int id)
+        static List<Part> LoadPart(int id)
         {
-            List<part> parts = new List<part>();
+            List<Part> parts = new List<Part>();
             try
             {
                 conn.Open();
