@@ -66,7 +66,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="dynowindow.xaml">
+    <Page Include="DynoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,28 +80,28 @@
     </Compile>
     <Compile Include="classes.cs" />
     <Compile Include="DatabaseController.cs" />
-    <Compile Include="dynowindow.xaml.cs">
-      <DependentUpon>dynowindow.xaml</DependentUpon>
+    <Compile Include="DynoWindow.xaml.cs">
+      <DependentUpon>DynoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="modwindow.xaml">
+    <Page Include="ModWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="newcarwindow.xaml">
+    <Page Include="NewCarWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="modwindow.xaml.cs">
-      <DependentUpon>modwindow.xaml</DependentUpon>
+    <Compile Include="ModWindow.xaml.cs">
+      <DependentUpon>ModWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="newcarwindow.xaml.cs">
-      <DependentUpon>newcarwindow.xaml</DependentUpon>
+    <Compile Include="NewCarWindow.xaml.cs">
+      <DependentUpon>NewCarWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
