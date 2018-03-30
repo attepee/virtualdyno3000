@@ -237,5 +237,125 @@ namespace virtualdyno3000
 
             return parts;
         }
+
+        static bool CreatePart(Part p)
+        {
+            bool result = false;
+            string query = string.Format("insert into tuningtable (manufacturer, partname, parttype, stage, toughness) values('{0}','{1}',{2},{3},{4});", p.manufacturer, p.partname, p.parttype, p.stage, p.toughness);
+
+            try
+            {
+                //check if connection is not already open
+                if (conn.State.ToString() == "Closed")
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand get = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = get.ExecuteReader();
+
+                //get number of affected rows
+                int i = get.ExecuteNonQuery();
+                conn.Close();
+
+                //affected rows should be 1
+                if (i == 1)
+                {
+                    result = true;
+                }
+                else if (i > 1)
+                {
+                    //this shouldn't happen but ok
+                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something wrong " + ex.ToString());
+            }
+
+            return result;
+        }
+
+        static bool UpdatePart(Part p)
+        {
+            bool result = false;
+            string query = string.Format("update tuningtable set manufacturer = '{0}', partname = '{1}', parttype = {2}, stage = {3}, toughness = {4} where partId = {5};", p.manufacturer, p.partname, p.parttype, p.stage, p.toughness, p.id);
+
+            try
+            {
+                //check if connection is not already open
+                if (conn.State.ToString() == "Closed")
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand get = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = get.ExecuteReader();
+
+                //get number of affected rows
+                int i = get.ExecuteNonQuery();
+                conn.Close();
+
+                //affected rows should be 1
+                if (i == 1)
+                {
+                    result = true;
+                }
+                else if (i > 1)
+                {
+                    //this shouldn't happen but ok
+                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something wrong " + ex.ToString());
+            }
+
+            return result;
+        }
+
+        static bool DeletePart(int id)
+        {
+            bool result = false;
+            string query = string.Format("delete from tuningtable where partId = {0};", id);
+
+            try
+            {
+                //check if connection is not already open
+                if (conn.State.ToString() == "Closed")
+                {
+                    conn.Open();
+                }
+
+                MySqlCommand get = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = get.ExecuteReader();
+
+                //get number of affected rows
+                int i = get.ExecuteNonQuery();
+                conn.Close();
+
+                //affected rows should be 1
+                if (i == 1)
+                {
+                    result = true;
+                }
+                else if (i > 1)
+                {
+                    //this shouldn't happen but ok
+                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something wrong " + ex.ToString());
+            }
+
+            return result;
+        }
     }
 }
