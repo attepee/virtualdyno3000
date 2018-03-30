@@ -97,7 +97,7 @@ namespace virtualdyno3000
                 else if (i > 1)
                 {
                     //this shouldn't happen but ok
-                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                    throw new Exception("ISO HÄLYTYS, liikaa rivejä muuttu");
                 }
             }
 
@@ -137,7 +137,7 @@ namespace virtualdyno3000
                 else if (i > 1)
                 {
                     //this shouldn't happen but ok
-                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                    throw new Exception("ISO HÄLYTYS, liikaa rivejä muuttu");
                 }
             }
 
@@ -177,7 +177,7 @@ namespace virtualdyno3000
                 else if (i > 1)
                 {
                     //this shouldn't happen but ok
-                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                    throw new Exception("ISO HÄLYTYS, liikaa rivejä muuttu");
                 }
             }
 
@@ -266,7 +266,7 @@ namespace virtualdyno3000
                 else if (i > 1)
                 {
                     //this shouldn't happen but ok
-                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                    throw new Exception("ISO HÄLYTYS, liikaa rivejä muuttu");
                 }
             }
 
@@ -306,7 +306,7 @@ namespace virtualdyno3000
                 else if (i > 1)
                 {
                     //this shouldn't happen but ok
-                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                    throw new Exception("ISO HÄLYTYS, liikaa rivejä muuttu");
                 }
             }
 
@@ -346,7 +346,7 @@ namespace virtualdyno3000
                 else if (i > 1)
                 {
                     //this shouldn't happen but ok
-                    throw new Exception("iso hälytys, liikaa rivejä muuttu");
+                    throw new Exception("ISO HÄLYTYS, liikaa rivejä muuttu");
                 }
             }
 

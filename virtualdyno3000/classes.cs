@@ -30,7 +30,6 @@ namespace virtualdyno3000
         public int parttype { get; set; }
         public int stage { get; set; }
         public int toughness { get; set; }
-
     }
 
 }
