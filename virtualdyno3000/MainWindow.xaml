@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="765">
+        Title="MainWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="addCarButton" Content="Add new car" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="addCarButton_Click"/>
         <Button x:Name="testCarButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,50,0,0" VerticalAlignment="Top" Width="100" Click="testCarButton_Click"/>
