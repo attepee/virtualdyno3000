@@ -75,7 +75,7 @@ namespace virtualdyno3000
 
         private void Savebutton_Click(object sender, RoutedEventArgs e)
         {
-
+            //tahan laitetaan tietokantaan tallentaminen
         }
 
         private void Menubutton_Click(object sender, RoutedEventArgs e)
@@ -87,7 +87,9 @@ namespace virtualdyno3000
 
         private void Tuning_Click(object sender, RoutedEventArgs e)
         {
-
+            ModWindow modWundow = new ModWindow();
+            modWundow.Show();
+            this.Close();
         }
     }
 }

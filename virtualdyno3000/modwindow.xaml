@@ -7,9 +7,27 @@
         mc:Ignorable="d"
         Title="ModWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="76"/>
-        <Button Content="Main menu" HorizontalAlignment="Left" Margin="12,80,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click"/>
-        <Button Content="Dyno" HorizontalAlignment="Left" Margin="12,138,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click"/>
-        
+
+
+        <Button x:Name="savebut" Content="Save" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="savebut_Click" Height="30"/>
+        <Button x:Name="mainbut" Content="Main menu" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="100" Click="mainbut_Click" Height="30"/>
+        <Button x:Name="dynobut" Content="Dyno" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Click="dynobut_Click" Height="30"/>
+
+
+        <ComboBox x:Name="Box1" HorizontalAlignment="Left" Margin="216,45,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Engine</ComboBoxItem>
+            <ComboBoxItem>Camshaft</ComboBoxItem>
+            <ComboBoxItem>Piston</ComboBoxItem>
+            <ComboBoxItem>Injector System</ComboBoxItem>
+            <ComboBoxItem>Exhaust</ComboBoxItem>
+            <ComboBoxItem>Turbo</ComboBoxItem>
+            <ComboBoxItem>Engine Block</ComboBoxItem>
+           
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="216,17,0,0" TextWrapping="Wrap" Text="Select Part" VerticalAlignment="Top" Width="120" IsReadOnly="True" FontSize="16" TextAlignment="Center"/>
+        <DataGrid x:Name="TurboData" HorizontalAlignment="Left" Height="528" Margin="216,128,0,0" VerticalAlignment="Top" Width="1029"/>
+        <Button x:Name="ApplyB" Content="Apply" HorizontalAlignment="Left" Margin="216,75,0,0" VerticalAlignment="Top" Width="120" Height="20" Click="ApplyB_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="447,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
     </Grid>
+
 </Window>
