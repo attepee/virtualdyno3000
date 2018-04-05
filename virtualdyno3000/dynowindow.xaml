@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="DynoWindow" Height="349.58" Width="525.21">
+        Title="DynoWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517" Background="#FF615959">
             <Canvas x:Name="myCanvas" HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="374" Margin="143,91,0,0" Background="#FF979797"/>

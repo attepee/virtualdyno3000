@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="ModWindow" Height="300" Width="300">
+        Title="ModWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button Content="Main menu" HorizontalAlignment="Left" Margin="12,80,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click"/>
+        <Button Content="Dyno" HorizontalAlignment="Left" Margin="12,138,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click"/>
         
     </Grid>
 </Window>
