@@ -19,9 +19,25 @@ namespace virtualdyno3000
     /// </summary>
     public partial class NewCarWindow : Window
     {
+        Car c = new Car();
+
         public NewCarWindow()
         {
             InitializeComponent();
+        }
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            c.manufacturer = manufacturer.Text;
+            c.model = model.Text;
+            c.engine = tools.ConvertToDouble(engine.Text);
+            c.year = int.Parse(year.Text);
+            DB.CreateCar(c);
+            this.Close();
         }
     }
 }

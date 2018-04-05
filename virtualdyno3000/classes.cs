@@ -11,7 +11,7 @@ namespace virtualdyno3000
         public int id { get; set; }
         public string manufacturer { get; set; }
         public string model { get; set; }
-        public float engine { get; set; }
+        public double engine { get; set; }
         public int year { get; set; }
         public int camshaft { get; set; }
         public int piston { get; set; }

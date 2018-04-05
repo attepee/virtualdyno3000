@@ -47,7 +47,7 @@ namespace virtualdyno3000
                     temp.id = int.Parse(dataReader["carId"].ToString());
                     temp.manufacturer = dataReader["manufacturer"].ToString();
                     temp.model = dataReader["model"].ToString();
-                    temp.engine = int.Parse(dataReader["engine"].ToString());
+                    temp.engine = double.Parse(dataReader["engine"].ToString());
                     temp.year = int.Parse(dataReader["year"].ToString());
                     temp.camshaft = int.Parse(dataReader["camshaft"].ToString());
                     temp.piston = int.Parse(dataReader["piston"].ToString());
@@ -69,10 +69,10 @@ namespace virtualdyno3000
             return cars;
         }
 
-        static bool CreateCar(Car c)
+        public static bool CreateCar(Car c)
         {
             bool result = false;
-            string query = string.Format("insert into cartable (manufacturer,model,engine,year,camshaft,piston,injectsystem,exhaust,turbo,block,broke) values('{0}','{1}',{2},{3},{4},{5},{6},{7},{8},{9},{10});", c.manufacturer, c.model, c.engine, c.year, c.camshaft, c.piston, c.injectionsystem, c.exhaust, c.turbo, c.block, c.broke);
+            string query = string.Format("insert into cartable (manufacturer,model,engine,year,camshaft,piston,injectsystem,exhaust,turbo,block,broke) values('{0}','{1}',{2},{3},{4},{5},{6},{7},{8},{9},{10});", c.manufacturer, c.model, c.engine.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture), c.year, c.camshaft, c.piston, c.injectionsystem, c.exhaust, c.turbo, c.block, c.broke);
 
             try
             {
@@ -109,7 +109,7 @@ namespace virtualdyno3000
             return result;
         }
 
-        static bool UpdateCar(Car c)
+        public static bool UpdateCar(Car c)
         {
             bool result = false;
             string query = string.Format("update cartable set manufacturer = '{0}', model = '{1}', engine = {2}, year = {3}, camshaft = {4}, piston = {5}, injectsystem = {6}, exhaust = {7}, turbo = {8}, block = {9}, broke = {10} where carId = {11};", c.manufacturer, c.model, c.engine, c.year, c.camshaft, c.piston, c.injectionsystem, c.exhaust, c.turbo, c.block, c.broke, c.id);
@@ -149,7 +149,7 @@ namespace virtualdyno3000
             return result;
         }
 
-        static bool DeleteCar(int id)
+        public static bool DeleteCar(int id)
         {
             bool result = false;
             string query = string.Format("delete from cartable where carId = {0};", id);
@@ -189,7 +189,7 @@ namespace virtualdyno3000
             return result;
         }
 
-        static List<Part> LoadPart(int id = 0)
+        public static List<Part> LoadPart(int id = 0)
         {
             List<Part> parts = new List<Part>();
             string query;
@@ -238,7 +238,7 @@ namespace virtualdyno3000
             return parts;
         }
 
-        static bool CreatePart(Part p)
+        public static bool CreatePart(Part p)
         {
             bool result = false;
             string query = string.Format("insert into tuningtable (manufacturer, partname, parttype, stage, toughness) values('{0}','{1}',{2},{3},{4});", p.manufacturer, p.partname, p.parttype, p.stage, p.toughness);
@@ -278,7 +278,7 @@ namespace virtualdyno3000
             return result;
         }
 
-        static bool UpdatePart(Part p)
+        public static bool UpdatePart(Part p)
         {
             bool result = false;
             string query = string.Format("update tuningtable set manufacturer = '{0}', partname = '{1}', parttype = {2}, stage = {3}, toughness = {4} where partId = {5};", p.manufacturer, p.partname, p.parttype, p.stage, p.toughness, p.id);
@@ -318,7 +318,7 @@ namespace virtualdyno3000
             return result;
         }
 
-        static bool DeletePart(int id)
+        public static bool DeletePart(int id)
         {
             bool result = false;
             string query = string.Format("delete from tuningtable where partId = {0};", id);
