@@ -45,6 +45,13 @@ namespace virtualdyno3000
 
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
+            DynoWindow dWindow = new DynoWindow();
+            dWindow.Show();
+            this.Close();
+        }
+
+        private void modCarButton_Click(object sender, RoutedEventArgs e)
+        {
             ModWindow mWindow = new ModWindow();
             mWindow.Show();
             this.Close();
