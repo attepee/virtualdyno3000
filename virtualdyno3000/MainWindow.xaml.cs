@@ -45,9 +45,8 @@ namespace virtualdyno3000
 
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
-            // Avaa auton dynottamis ikkunan ja sulkee pääikkunan
-            DynoWindow dWindow = new DynoWindow();
-            dWindow.Show();
+            ModWindow mWindow = new ModWindow();
+            mWindow.Show();
             this.Close();
         }
     }

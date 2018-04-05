@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="765">
     <Grid>
-        <Button x:Name="addCarButton" Content="Lisää uusi auto" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="addCarButton_Click"/>
-        <Button x:Name="testCarButton" Content="Testaa autoa" HorizontalAlignment="Left" Margin="26,50,0,0" VerticalAlignment="Top" Width="100" Click="testCarButton_Click"/>
+        <Button x:Name="addCarButton" Content="Add new car" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="addCarButton_Click"/>
+        <Button x:Name="testCarButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,50,0,0" VerticalAlignment="Top" Width="100" Click="testCarButton_Click"/>
         <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="299" Margin="151,10,0,0" VerticalAlignment="Top" Width="596"/>
+        <Button x:Name="modCarButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,87,0,0" VerticalAlignment="Top" Width="100" Click="testCarButton_Click"/>
 
     </Grid>
 </Window>
