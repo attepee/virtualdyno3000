@@ -27,15 +27,16 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 
 ### Tekijät ja työnjako
 
-| Tekijä                                              | Vastuu   |
-| --------------------------------------------------- | -------- |
-| [Matti Aho](https://github.com/matti644)            | Tietokantayhteys |
-| [Niklas Hietaranta](https://github.com/niklashieta) | Tulosten grafiikka |
-| [Atte Pekkarinen](https://github.com/attepee)       | Dokumentaatio      |
+| Tekijä                                              | Vastuu                                      |
+| --------------------------------------------------- | ------------------------------------------- |
+| [Matti Aho](https://github.com/matti644)            | Tietokantayhteys, ModWindow, Dynon logiikka |
+| [Niklas Hietaranta](https://github.com/niklashieta) | Testigrafiikka, DynoWindow                  |
+| [Atte Pekkarinen](https://github.com/attepee)       | Dokumentaatio, MainWindow, NewPartWindow    |
 
 #### Työaikasuunnitelma
 
 | Työn osa | Valmis |
 | - | - |
 | Suunnitelma | 8.4. |
+| Ikkunat | Ennen 24.4. |
 | Harjoitustyö | 25.4. |

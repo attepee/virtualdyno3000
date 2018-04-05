@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Virtualdyno3000 - Main" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="addCarButton" Content="Add new car" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="addCarButton_Click"/>
-        <Button x:Name="testCarButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,50,0,0" VerticalAlignment="Top" Width="100" Click="testCarButton_Click"/>
-        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="299" Margin="151,10,0,0" VerticalAlignment="Top" Width="596"/>
-        <Button x:Name="modCarButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,87,0,0" VerticalAlignment="Top" Width="100" Click="modCarButton_Click"/>
-
+        <Button x:Name="addCarButton" Content="Add car" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="addCarButton_Click"/>
+        <Button x:Name="addPartButton" Content="Add part" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="addPartButton_Click"/>
+        <Button x:Name="testCarButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,110,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="testCarButton_Click"/>
+        <Button x:Name="modCarButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="modCarButton_Click"/>
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="26,210,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="exitButton_Click"/>
+        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="671" Margin="152,10,0,0" VerticalAlignment="Top" Width="1106"/>
     </Grid>
 </Window>
