@@ -96,6 +96,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NewPartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModWindow.xaml.cs">
@@ -103,6 +107,9 @@
     </Compile>
     <Compile Include="NewCarWindow.xaml.cs">
       <DependentUpon>NewCarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewPartWindow.xaml.cs">
+      <DependentUpon>NewPartWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

@@ -23,28 +23,40 @@ namespace virtualdyno3000
         public MainWindow()
         {
             InitializeComponent();
+
+            // https://github.com/Microsoft/InteractiveDataDisplay.WPF
+            // Creates a list and loads cars from
+            // database to it 
             List<Car> cars = new List<Car>();
             cars = DB.LoadCar();
 
-            // Lisää stackpaneliin datagridin, näin datagridistä
-            // saa automaattisesti sopivan kokoisen riveihin nähden
+            // Adds datagrid to stackpanel so datagrid is
+            // Always the right height
             DataGrid carGrid = new DataGrid();
             stackPanel.Children.Add(carGrid);
-            carGrid.ItemsSource = cars;
+            carGrid.IsReadOnly = true;
 
-            //https://github.com/Microsoft/InteractiveDataDisplay.WPF
+            // Adds cars from list to datagrid 
+            carGrid.ItemsSource = cars;
         }
 
         private void addCarButton_Click(object sender, RoutedEventArgs e)
         {
-            // Avaa uuden auton lisäämis ikkunan ja sulkee pääikkunan
+            // Open NewCarWindow
             NewCarWindow nCarWindow = new NewCarWindow();
             nCarWindow.Show();
-            this.Close();
+        }
+
+        private void addPartButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Open NewPartWindow
+            NewPartWindow nPartWindow = new NewPartWindow();
+            nPartWindow.Show();
         }
 
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
+            // Open DynoWindow
             DynoWindow dWindow = new DynoWindow();
             dWindow.Show();
             this.Close();
@@ -52,8 +64,15 @@ namespace virtualdyno3000
 
         private void modCarButton_Click(object sender, RoutedEventArgs e)
         {
+            // Add ModWindow
             ModWindow mWindow = new ModWindow();
             mWindow.Show();
+            this.Close();
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Exit application
             this.Close();
         }
     }
