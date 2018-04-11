@@ -33,11 +33,11 @@ namespace virtualdyno3000
         private void save_Click(object sender, RoutedEventArgs e)
         {
             bool save = true;
-            if(manufacturer.Text != "" && model.Text != "" && tools.doubleregex(engine.Text) != "" && tools.intregex(year.Text) != "")
+            if(manufacturer.Text != "" && model.Text != "" && Tools.DoubleRegex(engine.Text) != "" && Tools.IntRegex(year.Text) != "")
             {
                 c.manufacturer = manufacturer.Text;
                 c.model = model.Text;
-                c.engine = tools.ConvertToDouble(engine.Text);
+                c.engine = Tools.ConvertToDouble(engine.Text);
                 c.year = int.Parse(year.Text);
             }
             else

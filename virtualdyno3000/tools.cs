@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace virtualdyno3000
 {
-    public static class tools
+    public static class Tools
     {
         public static double ConvertToDouble(string s)
         {
@@ -43,15 +43,23 @@ namespace virtualdyno3000
             }
             return result;
         }
-        public static string doubleregex(string s)
+        public static string DoubleRegex(string s)
         {
             string result = Regex.Replace(s, @"[^\d\.]", "");
             return result;
         }
-        public static string intregex(string s)
+        public static string IntRegex(string s)
         {
             string result = Regex.Replace(s, @"[^\d]", "");
             return result;
+        }
+    }
+    static class Power
+    {
+        public static double Calc(int rpm, Car c)
+        {
+            double currentPower = 0;
+            return currentPower;
         }
     }
 }
