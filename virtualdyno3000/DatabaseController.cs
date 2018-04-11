@@ -58,6 +58,7 @@ namespace virtualdyno3000
                     temp.broke = int.Parse(dataReader["broke"].ToString());
                     cars.Add(temp);
                 }
+                dataReader.Close();
                 conn.Close();
             }
 
@@ -84,6 +85,7 @@ namespace virtualdyno3000
 
                 MySqlCommand get = new MySqlCommand(query, conn);
                 MySqlDataReader dataReader = get.ExecuteReader();
+                dataReader.Close();
 
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
@@ -124,6 +126,7 @@ namespace virtualdyno3000
 
                 MySqlCommand get = new MySqlCommand(query, conn);
                 MySqlDataReader dataReader = get.ExecuteReader();
+                dataReader.Close();
 
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
@@ -164,6 +167,7 @@ namespace virtualdyno3000
 
                 MySqlCommand get = new MySqlCommand(query, conn);
                 MySqlDataReader dataReader = get.ExecuteReader();
+                dataReader.Close();
 
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
@@ -227,6 +231,7 @@ namespace virtualdyno3000
                     temp.toughness = int.Parse(dataReader["toughness"].ToString());
                     parts.Add(temp);
                 }
+                dataReader.Close();
                 conn.Close();
             }
 
@@ -253,6 +258,7 @@ namespace virtualdyno3000
 
                 MySqlCommand get = new MySqlCommand(query, conn);
                 MySqlDataReader dataReader = get.ExecuteReader();
+                dataReader.Close();
 
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
@@ -293,6 +299,7 @@ namespace virtualdyno3000
 
                 MySqlCommand get = new MySqlCommand(query, conn);
                 MySqlDataReader dataReader = get.ExecuteReader();
+                dataReader.Close();
 
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
@@ -333,6 +340,7 @@ namespace virtualdyno3000
 
                 MySqlCommand get = new MySqlCommand(query, conn);
                 MySqlDataReader dataReader = get.ExecuteReader();
+                dataReader.Close();
 
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();

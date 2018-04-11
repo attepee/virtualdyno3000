@@ -32,12 +32,31 @@ namespace virtualdyno3000
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            c.manufacturer = manufacturer.Text;
-            c.model = model.Text;
-            c.engine = tools.ConvertToDouble(engine.Text);
-            c.year = int.Parse(year.Text);
-            DB.CreateCar(c);
-            this.Close();
+            bool save = true;
+            if(manufacturer.Text != "" && model.Text != "" && tools.doubleregex(engine.Text) != "" && tools.intregex(year.Text) != "")
+            {
+                c.manufacturer = manufacturer.Text;
+                c.model = model.Text;
+                c.engine = tools.ConvertToDouble(engine.Text);
+                c.year = int.Parse(year.Text);
+            }
+            else
+            {
+                save = false;
+                MessageBox.Show("check input fields!");
+            }
+            if(save)
+            {
+                if(DB.CreateCar(c))
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong, no cars added.");
+                }
+            }
+
         }
     }
 }

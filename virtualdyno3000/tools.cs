@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.Threading;
+using System.Text.RegularExpressions;
+
 namespace virtualdyno3000
 {
     public static class tools
@@ -39,6 +41,16 @@ namespace virtualdyno3000
                     }
                 }
             }
+            return result;
+        }
+        public static string doubleregex(string s)
+        {
+            string result = Regex.Replace(s, @"[^\d\.]", "");
+            return result;
+        }
+        public static string intregex(string s)
+        {
+            string result = Regex.Replace(s, @"[^\d]", "");
             return result;
         }
     }
