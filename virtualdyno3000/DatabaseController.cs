@@ -84,9 +84,6 @@ namespace virtualdyno3000
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
-                MySqlDataReader dataReader = get.ExecuteReader();
-                dataReader.Close();
-
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
                 conn.Close();
@@ -125,9 +122,6 @@ namespace virtualdyno3000
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
-                MySqlDataReader dataReader = get.ExecuteReader();
-                dataReader.Close();
-
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
                 conn.Close();
@@ -166,9 +160,6 @@ namespace virtualdyno3000
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
-                MySqlDataReader dataReader = get.ExecuteReader();
-                dataReader.Close();
-
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
                 conn.Close();
@@ -257,9 +248,6 @@ namespace virtualdyno3000
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
-                MySqlDataReader dataReader = get.ExecuteReader();
-                dataReader.Close();
-
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
                 conn.Close();
@@ -298,9 +286,6 @@ namespace virtualdyno3000
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
-                MySqlDataReader dataReader = get.ExecuteReader();
-                dataReader.Close();
-
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
                 conn.Close();
@@ -339,9 +324,6 @@ namespace virtualdyno3000
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
-                MySqlDataReader dataReader = get.ExecuteReader();
-                dataReader.Close();
-
                 //get number of affected rows
                 int i = get.ExecuteNonQuery();
                 conn.Close();
