@@ -56,10 +56,9 @@ namespace virtualdyno3000
     }
     static class Power
     {
-        public static double Calc(int rpm, Car c)
+        public static State Calc(State s, Car c)
         {
-            double currentPower = 0;
-            return currentPower;
+            return s;
         }
     }
 }

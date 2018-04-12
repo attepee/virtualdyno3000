@@ -87,7 +87,8 @@ namespace virtualdyno3000
 
         private void Tuning_Click(object sender, RoutedEventArgs e)
         {
-            ModWindow modWundow = new ModWindow();
+            Car auto = new Car();
+            ModWindow modWundow = new ModWindow(auto);
             modWundow.Show();
             this.Close();
         }

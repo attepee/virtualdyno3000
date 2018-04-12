@@ -64,8 +64,9 @@ namespace virtualdyno3000
 
         private void modCarButton_Click(object sender, RoutedEventArgs e)
         {
+            Car auto = new Car();
             // Add ModWindow
-            ModWindow mWindow = new ModWindow();
+            ModWindow mWindow = new ModWindow(auto);
             mWindow.Show();
             this.Close();
         }
