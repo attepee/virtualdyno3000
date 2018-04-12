@@ -22,6 +22,20 @@
                 <ComboBoxItem Content="Turbo"/>
                 <ComboBoxItem Content="Block"/>
             </ComboBox>
+            <Label Content="Stage" Width="500" Height="30" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="stageBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center">
+                <ComboBoxItem Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+            </ComboBox>
+            <Label Content="Toughness" Width="500" Height="30" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="toughnessBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center">
+                <ComboBoxItem Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+            </ComboBox>
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="clearButton" Content="Clear" Width="240" Height="30" Margin="0,0,10,0" Click="clearButton_Click"/>
                 <Button x:Name="saveButton" Content="Save Part" Width="240" Height="30" Margin="10,0,0,0" Click="saveButton_Click"/>

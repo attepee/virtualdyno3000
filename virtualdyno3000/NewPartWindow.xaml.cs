@@ -41,18 +41,30 @@ namespace virtualdyno3000
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            /*
-             * SelectedIndexe means the selected item
-             * -1 is nothing, 0 is the first item and so on
-             * 
-            int selection = partTypeBox.SelectedIndex;
-            MessageBox.Show(selection.ToString());
-            */
+            // Comboboxes SelectedIndex means the selected item
+            // -1 is nothing, 0 is the first item and so on
 
+            // Create new part from input
             Part newPart = new Part();
             newPart.manufacturer = manufacturerTextBox.Text;
             newPart.partname = nameTextBox.Text;
-            newPart.parttype = partTypeBox.SelectedIndex;
+            newPart.parttype = partTypeBox.SelectedIndex + 1;
+            newPart.stage = stageBox.SelectedIndex + 1;
+            newPart.toughness = toughnessBox.SelectedIndex + 1;
+
+            //Add new part to DB
+            try
+            {
+                if (DB.CreatePart(newPart))
+                {
+                    MessageBox.Show("Part Added!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something wrong " + ex.ToString());
+            }
+            
         }
     }
 }

@@ -13,12 +13,12 @@ namespace virtualdyno3000
         public string model { get; set; }
         public double engine { get; set; }
         public int year { get; set; }
-        public int camshaft { get; set; }
-        public int piston { get; set; }
-        public int injectionsystem { get; set; }
-        public int exhaust { get; set; }
-        public int turbo { get; set; }
-        public int block { get; set; }
+        public int camshaft { get; set; }           // 1
+        public int piston { get; set; }             // 2
+        public int injectionsystem { get; set; }    // 3
+        public int exhaust { get; set; }            // 4
+        public int turbo { get; set; }              // 5
+        public int block { get; set; }              // 6
         public int broke { get; set; }
     }
 
