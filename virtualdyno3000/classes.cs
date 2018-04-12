@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace virtualdyno3000
 {
-    class Car
+    public class Car
     {
         public int id { get; set; }
         public string manufacturer { get; set; }
@@ -22,7 +22,7 @@ namespace virtualdyno3000
         public int broke { get; set; }
     }
 
-    class Part
+    public class Part
     {
         public int id { get; set; }
         public string manufacturer { get; set; }
@@ -31,10 +31,12 @@ namespace virtualdyno3000
         public int stage { get; set; }
         public int toughness { get; set; }
     }
-    class State
+    public class State
     {
         public double torgue { get; set; }
         public int rpm { get; set; }
+        public double lastCalcTime { get; set; }
+        public double calcToTime { get; set; }
         public bool broke { get; set; }
 
     }

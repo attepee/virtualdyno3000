@@ -19,7 +19,7 @@ namespace virtualdyno3000
     /// </summary>
     public partial class ModWindow : Window
     {
-        public ModWindow()
+        public ModWindow(Car c)
         {
             InitializeComponent();
             
