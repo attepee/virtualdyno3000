@@ -31,5 +31,12 @@ namespace virtualdyno3000
         public int stage { get; set; }
         public int toughness { get; set; }
     }
+    class State
+    {
+        public double torgue { get; set; }
+        public int rpm { get; set; }
+        public bool broke { get; set; }
+
+    }
 
 }
