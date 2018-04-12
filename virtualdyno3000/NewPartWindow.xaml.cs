@@ -53,18 +53,14 @@ namespace virtualdyno3000
             newPart.toughness = toughnessBox.SelectedIndex + 1;
 
             //Add new part to DB
-            try
+            if (DB.CreatePart(newPart))
             {
-                if (DB.CreatePart(newPart))
-                {
-                    MessageBox.Show("Part Added!");
-                }
+                MessageBox.Show("Part Added!");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Something wrong " + ex.ToString());
+                MessageBox.Show("Something went wrong. No part added");
             }
-            
         }
     }
 }
