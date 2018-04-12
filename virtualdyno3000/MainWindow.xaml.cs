@@ -32,13 +32,15 @@ namespace virtualdyno3000
 
             // Adds datagrid to stackpanel so datagrid is
             // Always the right height
+            /*
             DataGrid carGrid = new DataGrid();
             stackPanel.Children.Add(carGrid);
             carGrid.IsReadOnly = true;
+            */
 
             // Adds cars from list to datagrid 
             carGrid.ItemsSource = cars;
-        }
+    }
 
         private void addCarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -56,6 +58,9 @@ namespace virtualdyno3000
 
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
+            // Car can be selected using carGrid.SelectedIndex + 1
+            // this returns the cars id
+
             // Open DynoWindow
             DynoWindow dWindow = new DynoWindow();
             dWindow.Show();
@@ -64,9 +69,12 @@ namespace virtualdyno3000
 
         private void modCarButton_Click(object sender, RoutedEventArgs e)
         {
-            Car auto = new Car();
+            // Car can be selected using carGrid.SelectedIndex + 1
+            // this returns the cars id
+
+            Car nCar = new Car();
             // Add ModWindow
-            ModWindow mWindow = new ModWindow(auto);
+            ModWindow mWindow = new ModWindow(nCar);
             mWindow.Show();
             this.Close();
         }
