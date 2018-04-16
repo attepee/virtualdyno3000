@@ -184,8 +184,7 @@ namespace virtualdyno3000
             return result;
         }
 
-        public static List<Part> 
-            LoadPart(int id = 0)
+        public static List<Part> LoadPart(int id = 0)
         {
             List<Part> parts = new List<Part>();
             string query;
@@ -205,7 +204,8 @@ namespace virtualdyno3000
                 }
                 else
                 {
-                    query = "SELECT * FROM cartable";
+                    //query = "SELECT * FROM cartable"; ei näin :DDD copypaste iski
+                    query = "SELECT * FROM tuningtable";
                 }
 
                 MySqlCommand get = new MySqlCommand(query, conn);
@@ -223,7 +223,7 @@ namespace virtualdyno3000
                     temp.toughness = int.Parse(dataReader["toughness"].ToString());
                     parts.Add(temp);
                 }
-
+                dataReader.Close();
                 conn.Close();
             }
 
