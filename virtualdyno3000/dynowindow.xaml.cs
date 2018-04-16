@@ -28,7 +28,7 @@ namespace virtualdyno3000
         private Point currentposition = new Point(0, 228);
 
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             int h = 0;
             int a = 200;
@@ -49,9 +49,9 @@ namespace virtualdyno3000
                 Canvas.SetLeft(ellipsePoint, f);
                 Canvas.SetTop(ellipsePoint, homo);
 
-                myCanvas.Children.Add(ellipsePoint);
+                dynoCanvas.Children.Add(ellipsePoint);
 
-                myCanvas.Children.Add(ellipsePoints);
+                dynoCanvas.Children.Add(ellipsePoints);
                 h++;
                 h++;
                 a--;
@@ -64,29 +64,31 @@ namespace virtualdyno3000
 
             }
 
-            Hp.Text = "HP: 250";
-            Nm.Text = "NM: 213";
+            hp.Text = "HP: 250";
+            nm.Text = "NM: 213";
         }
 
-        private void Stopbutton_Click(object sender, RoutedEventArgs e)
+        private void stopButton_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            // Stops the dyno
         }
 
-        private void Savebutton_Click(object sender, RoutedEventArgs e)
+        private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            //tahan laitetaan tietokantaan tallentaminen
+            // Saves results ot db
         }
 
-        private void Menubutton_Click(object sender, RoutedEventArgs e)
+        private void menuButton_Click(object sender, RoutedEventArgs e)
         {
+            // Closes dynowindow and opens main
             MainWindow mWindow = new MainWindow();
             mWindow.Show();
             this.Close();
         }
 
-        private void Tuning_Click(object sender, RoutedEventArgs e)
+        private void modButton_Click(object sender, RoutedEventArgs e)
         {
+            // closes dynowindow and opens modwindow
             Car auto = new Car();
             ModWindow modWundow = new ModWindow(auto);
             modWundow.Show();
