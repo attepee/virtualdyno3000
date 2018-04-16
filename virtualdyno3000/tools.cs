@@ -9,8 +9,17 @@ using System.Text.RegularExpressions;
 
 namespace virtualdyno3000
 {
+    /// <summary>
+    /// Some miserable pieces of code
+    /// </summary>
     public static class Tools
     {
+
+        /// <summary>
+        /// Does magic with string supposed to be double
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static double ConvertToDouble(string s)
         {
             char systemSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
@@ -43,21 +52,44 @@ namespace virtualdyno3000
             }
             return result;
         }
+        /// <summary>
+        /// Removes all non number and . characters from a string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static string DoubleRegex(string s)
         {
             string result = Regex.Replace(s, @"[^\d\.]", "");
             return result;
         }
+        /// <summary>
+        /// Removes all but number characters from a string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static string IntRegex(string s)
         {
             string result = Regex.Replace(s, @"[^\d]", "");
             return result;
         }
     }
+    /// <summary>
+    /// Supposedly calculates something about power
+    /// </summary>
     static class Power
     {
+        /// <summary>
+        /// Claculates power output and rpm increase of a car on specified timeframe.
+        /// </summary>
+        /// <param name="s">Current state of the car</param>
+        /// <param name="c">Car object</param>
+        /// <returns></returns>
         public static State Calc(State s, Car c)
         {
+            for(double d = 0; d < s.calcToTime - s.lastCalcTime;)
+            {
+
+            }
             return s;
         }
     }
