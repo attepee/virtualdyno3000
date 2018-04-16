@@ -35,8 +35,10 @@ namespace virtualdyno3000
             // Clears any text and selections from
             // textboxes and combobox
             manufacturerTextBox.Text = null;
-            nameTextBox.Text = null;
+            modelTextBox.Text = null;
             partTypeBox.SelectedIndex = -1;
+            stageBox.SelectedIndex = -1;
+            toughnessBox.SelectedIndex = -1;
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
@@ -44,22 +46,39 @@ namespace virtualdyno3000
             // Comboboxes SelectedIndex means the selected item
             // -1 is nothing, 0 is the first item and so on
 
-            // Create new part from input
             Part newPart = new Part();
-            newPart.manufacturer = manufacturerTextBox.Text;
-            newPart.partname = nameTextBox.Text;
-            newPart.parttype = partTypeBox.SelectedIndex + 1;
-            newPart.stage = stageBox.SelectedIndex + 1;
-            newPart.toughness = toughnessBox.SelectedIndex + 1;
 
-            //Add new part to DB
-            if (DB.CreatePart(newPart))
+            bool save = true;
+            if (manufacturerTextBox.Text != "" &&
+                modelTextBox.Text != "" &&
+                partTypeBox.SelectedIndex != -1 &&
+                stageBox.SelectedIndex != -1 &&
+                toughnessBox.SelectedIndex != -1)
             {
-                MessageBox.Show("Part Added!");
+                // Add selected data to part
+                newPart.manufacturer = manufacturerTextBox.Text;
+                newPart.partname = modelTextBox.Text;
+                newPart.parttype = partTypeBox.SelectedIndex + 1;
+                newPart.stage = stageBox.SelectedIndex + 1;
+                newPart.toughness = toughnessBox.SelectedIndex + 1;
             }
             else
             {
-                MessageBox.Show("Something went wrong. No part added");
+                // If some fields are empty
+                save = false;
+                MessageBox.Show("check input fields!");
+            }
+            if (save)
+            {
+                //Add new part to DB
+                if (DB.CreatePart(newPart))
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong, no parts added.");
+                }
             }
         }
     }

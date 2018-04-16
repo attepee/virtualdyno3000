@@ -5,18 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="Add new car" Height="300" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF9B9B9B">
-
-        <TextBox x:Name="manufacturer" HorizontalAlignment="Left" Height="23" Margin="146,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="model" HorizontalAlignment="Left" Height="23" Margin="146,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="146,26,0,0" VerticalAlignment="Top" Height="26" Width="81"/>
-        <Label Content="Model" HorizontalAlignment="Left" Margin="146,80,0,0" VerticalAlignment="Top" Height="26" Width="44"/>
-        <TextBox x:Name="engine" HorizontalAlignment="Left" Height="23" Margin="146,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Engine size" HorizontalAlignment="Left" Margin="146,134,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
-        <TextBox x:Name="year" HorizontalAlignment="Left" Height="23" Margin="146,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Manufacturing year&#xD;&#xA;" HorizontalAlignment="Left" Margin="146,188,0,0" VerticalAlignment="Top" Height="42" Width="113"/>
-        <Button x:Name="save" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,45,0,0" Height="30" Click="save_Click"/>
-        <Button x:Name="close" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,99,0,0" Height="30" Click="close_Click"/>
+        Title="Add new car" Height="330" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="save" Content="Save" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="save_Click"/>
+        <Button x:Name="clear" Content="Clear" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="clear_Click"/>
+        <Button x:Name="close" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10,140,0,0" Height="30" Click="close_Click"/>
+        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="281" Margin="140,10,0,0" VerticalAlignment="Top" Width="164">
+            <Label Content="Manufacturer" HorizontalAlignment="Left" Height="30" Width="150"/>
+            <TextBox x:Name="manufacturer" HorizontalAlignment="Left" Height="30" Width="150" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+            <Label Content="Model" HorizontalAlignment="Left" Height="30" Width="150"/>
+            <TextBox x:Name="model" HorizontalAlignment="Left" Height="30" Width="150" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+            <Label Content="Engine size" HorizontalAlignment="Left" Height="30" Width="150"/>
+            <TextBox x:Name="engine" HorizontalAlignment="Left" Height="30" Width="150" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+            <Label Content="Manufacturing year&#xD;&#xA;" HorizontalAlignment="Left" Height="30" Width="150"/>
+            <TextBox x:Name="year" HorizontalAlignment="Left" Height="30" Width="150" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Window>

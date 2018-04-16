@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="Virtualdyno3000 - New part" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Virtualdyno3000 - New part" Height="400" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="exitButton_Click"/>
-        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="671" Margin="352,10,0,0" VerticalAlignment="Top" Width="1106">
-            <Label Content="Manufacturer" Width="500" Height="30" HorizontalAlignment="Left"/>
-            <TextBox x:Name="manufacturerTextBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center"/>
-            <Label Content="Name" Width="500" Height="30" HorizontalAlignment="Left"/>
-            <TextBox x:Name="nameTextBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center"/>
-            <Label Content="Type" Width="500" Height="30" HorizontalAlignment="Left"/>
-            <ComboBox x:Name="partTypeBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center">
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="saveButton_Click"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="clearButton_Click"/>
+        <Button x:Name="exitButton" Content="Close" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="exitButton_Click"/>
+        <StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="351" Margin="140,10,0,0" VerticalAlignment="Top" Width="164">
+            <Label Content="Manufacturer" Width="150" Height="30" HorizontalAlignment="Left"/>
+            <TextBox x:Name="manufacturerTextBox" Width="150" Height="30" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+            <Label Content="Model" Width="150" Height="30" HorizontalAlignment="Left"/>
+            <TextBox x:Name="modelTextBox" Width="150" Height="30" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+            <Label Content="Type" Width="150" Height="30" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="partTypeBox" Width="150" Height="30" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalContentAlignment="Center">
                 <ComboBoxItem Content="Camshaft"/>
                 <ComboBoxItem Content="Piston"/>
                 <ComboBoxItem Content="Injectionsystem"/>
@@ -22,24 +24,20 @@
                 <ComboBoxItem Content="Turbo"/>
                 <ComboBoxItem Content="Block"/>
             </ComboBox>
-            <Label Content="Stage" Width="500" Height="30" HorizontalAlignment="Left"/>
-            <ComboBox x:Name="stageBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center">
+            <Label Content="Stage" Width="150" Height="30" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="stageBox" Width="150" Height="30" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalContentAlignment="Center">
                 <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
                 <ComboBoxItem Content="4"/>
             </ComboBox>
-            <Label Content="Toughness" Width="500" Height="30" HorizontalAlignment="Left"/>
-            <ComboBox x:Name="toughnessBox" Width="500" Height="30" HorizontalAlignment="Left" Margin="0,0,0,20" VerticalContentAlignment="Center">
+            <Label Content="Toughness" Width="150" Height="30" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="toughnessBox" Width="150" Height="30" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalContentAlignment="Center">
                 <ComboBoxItem Content="1"/>
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
                 <ComboBoxItem Content="4"/>
             </ComboBox>
-            <StackPanel Orientation="Horizontal">
-                <Button x:Name="clearButton" Content="Clear" Width="240" Height="30" Margin="0,0,10,0" Click="clearButton_Click"/>
-                <Button x:Name="saveButton" Content="Save Part" Width="240" Height="30" Margin="10,0,0,0" Click="saveButton_Click"/>
-            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
