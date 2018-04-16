@@ -86,9 +86,11 @@ namespace virtualdyno3000
         /// <returns></returns>
         public static State Calc(State s, Car c)
         {
-            for(double d = 0; d < s.calcToTime - s.lastCalcTime;)
+            double time = s.calcToTime - s.lastCalcTime;
+            for (double d = 0; d < time;)
             {
-
+                double round = 60/s.rpm;
+                d =+ round;
             }
             return s;
         }
