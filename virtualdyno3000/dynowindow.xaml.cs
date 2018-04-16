@@ -19,9 +19,10 @@ namespace virtualdyno3000
     /// </summary>
     public partial class DynoWindow : Window
     {
-        public DynoWindow()
+        public DynoWindow(/*int carId*/)
         {
             InitializeComponent();
+            //MessageBox.Show(carId.ToString());
         }
 
         private int ellipselenght = 374;

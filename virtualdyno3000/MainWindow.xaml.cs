@@ -60,7 +60,9 @@ namespace virtualdyno3000
             // this returns the value equal to the cars id
 
             // Open DynoWindow
-            DynoWindow dWindow = new DynoWindow();
+            //int carId = carGrid.SelectedIndex + 1;
+
+            DynoWindow dWindow = new DynoWindow(/*carId*/);
             dWindow.Show();
             this.Close();
         }
