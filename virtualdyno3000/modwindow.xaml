@@ -7,14 +7,12 @@
         mc:Ignorable="d"
         Title="ModWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-
-
-        <Button x:Name="savebut" Content="Save" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="savebut_Click" Height="30"/>
-        <Button x:Name="mainbut" Content="Main menu" HorizontalAlignment="Left" Margin="26,240,0,0" VerticalAlignment="Top" Width="100" Click="mainbut_Click" Height="30"/>
-        <Button x:Name="dynobut" Content="Dyno" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Click="dynobut_Click" Height="30"/>
-
-
-        <ComboBox x:Name="Box1" HorizontalAlignment="Left" Margin="216,45,0,0" VerticalAlignment="Top" Width="120">
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="saveButton_Click" Height="30"/>
+        <Button x:Name="dynoButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Click="dynoButton_Click" Height="30"/>
+        <Button x:Name="mainButotn" Content="Main menu" HorizontalAlignment="Left" Margin="26,611,0,0" VerticalAlignment="Top" Width="100" Click="mainButton_Click" Height="30"/>
+        <Label x:Name="currentCar" HorizontalAlignment="Left" Height="30" Margin="152,10,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
+        <Label Content="Select part" HorizontalAlignment="Left" Height="30" Margin="434,10,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
+        <ComboBox x:Name="partBox" HorizontalAlignment="Left" Margin="524,10,0,0" VerticalAlignment="Top" Width="100" Height="30" DropDownClosed="partBox_DropDownClosed">
             <ComboBoxItem>Engine</ComboBoxItem>
             <ComboBoxItem>Camshaft</ComboBoxItem>
             <ComboBoxItem>Piston</ComboBoxItem>
@@ -22,12 +20,9 @@
             <ComboBoxItem>Exhaust</ComboBoxItem>
             <ComboBoxItem>Turbo</ComboBoxItem>
             <ComboBoxItem>Engine Block</ComboBoxItem>
-           
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="216,17,0,0" TextWrapping="Wrap" Text="Select Part" VerticalAlignment="Top" Width="120" IsReadOnly="True" FontSize="16" TextAlignment="Center"/>
-        <DataGrid x:Name="TurboData" HorizontalAlignment="Left" Height="528" Margin="216,128,0,0" VerticalAlignment="Top" Width="1029"/>
-        <Button x:Name="ApplyB" Content="Apply" HorizontalAlignment="Left" Margin="216,75,0,0" VerticalAlignment="Top" Width="120" Height="20" Click="ApplyB_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="447,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="629,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="applyButton_Click"/>
+        <DataGrid x:Name="partGrid" HorizontalAlignment="Left" Height="596" Margin="152,45,0,0" VerticalAlignment="Top" Width="1029"/>
     </Grid>
 
 </Window>

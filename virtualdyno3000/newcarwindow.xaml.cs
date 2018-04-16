@@ -58,5 +58,13 @@ namespace virtualdyno3000
             }
 
         }
+
+        private void clear_Click(object sender, RoutedEventArgs e)
+        {
+            manufacturer.Text = null;
+            model.Text = null;
+            engine.Text = null;
+            year.Text = null;
+        }
     }
 }

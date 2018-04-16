@@ -22,103 +22,40 @@ namespace virtualdyno3000
         public ModWindow(Car c)
         {
             InitializeComponent();
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Save car configuration to db
+        }
+
+        private void applyButton_Click(object sender, RoutedEventArgs e)
+        {
             
         }
 
-        private void savebut_Click(object sender, RoutedEventArgs e)
+        private void mainButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void ApplyB_Click(object sender, RoutedEventArgs e)
-        {
-            int selection = Box1.SelectedIndex;
-
-            switch(selection)
-            {
-                case 0:
-                    textBox1.Text = "Engine";
-                   /* List<Car> cars = new List<Car>();
-                    cars = DB.LoadCar();
-                    TurboData.ItemsSource = cars;*/
-                    generate_columns();
-                    break;
-                case 1:
-                    textBox1.Text = "Camshaft";
-                    DataGridTextColumn textColumn = new DataGridTextColumn();
-                    textColumn.Header = "Model";
-                    textColumn.Binding = new Binding("Model");
-                    TurboData.Columns.Add(textColumn);
-                    break;
-                case 2:
-                    textBox1.Text = "Piston";
-                    List<Car> cars = new List<Car>();
-                    cars = DB.LoadCar();
-                    TurboData.ItemsSource = cars;
-                    break;
-                case 3:
-                    textBox1.Text = "Injector System";
-                    break;
-                case 4:
-                    textBox1.Text = "Exhaust";
-                    break;
-                case 5:
-                    textBox1.Text = "Turbo";
-                    break;
-                case 6:
-                    textBox1.Text = "Engine Block";
-                    break;
-
-            }
-                
-           /* List<Car> cars = new List<Car>();
-            cars = DB.LoadCar();
-            TurboData.ItemsSource = cars;*/
-        }
-
-        private void mainbut_Click(object sender, RoutedEventArgs e)
-        {
+            // Closes this and opens main
             MainWindow mWindow = new MainWindow();
             mWindow.Show();
             this.Close();
         }
-        private void dynobut_Click(object sender, RoutedEventArgs e)
+        private void dynoButton_Click(object sender, RoutedEventArgs e)
         {
+            // Closes this and open dynowindow
             DynoWindow dwin = new DynoWindow();
             dwin.Show();
             this.Close();
         }
-        public class Item
+
+        private void partBox_DropDownClosed(object sender, EventArgs e)
         {
-            public string Num { get; set; }
-            public string Start { get; set; }
-            public string Finich { get; set; }
+            // Creates a list and loads parts from database to it 
+            List<Part> parts = new List<Part>();
+            parts = DB.LoadPart();
+
+            partGrid.ItemsSource = parts;
         }
-
-        private void generate_columns()
-        {
-            DataGridTextColumn c1 = new DataGridTextColumn();
-            c1.Header = "Manufacturerrori";
-            c1.Binding = new Binding("Num");
-            c1.Width = 110;
-            TurboData.Columns.Add(c1);
-            DataGridTextColumn c2 = new DataGridTextColumn();
-            c2.Header = "Model";
-            c2.Width = 110;
-            c2.Binding = new Binding("Start");
-            TurboData.Columns.Add(c2);
-            DataGridTextColumn c3 = new DataGridTextColumn();
-            c3.Header = "Wing size";
-            c3.Width = 110;
-            c3.Binding = new Binding("Finich");
-            TurboData.Columns.Add(c3);
-
-            TurboData.Items.Add(new Item() { Num = "Garret", Start = "A21", Finich = "60mm" });
-            TurboData.Items.Add(new Item() { Num = "holset", Start = "hol231", Finich = "120mm" });
-            TurboData.Items.Add(new Item() { Num = "motonet", Start = "cheaptrubo", Finich = "2mm" });
-
-        }
-
-
     }
 }

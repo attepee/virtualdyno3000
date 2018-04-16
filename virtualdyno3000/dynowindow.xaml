@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="DynoWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280" Background="#FF615959">
-            <Canvas x:Name="myCanvas" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="1127" Margin="143,91,0,0" Background="#FF979797"/>
-            <TextBlock x:Name="Hp" HorizontalAlignment="Left" Margin="342,38,0,0" TextWrapping="Wrap" Text="HP:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="Nm" HorizontalAlignment="Left" Margin="421,38,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
-            <Button x:Name="Startbutton" Content="START" HorizontalAlignment="Left" Margin="21,91,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Background="#FFDCDBDB"/>
-            <Button x:Name="Stopbutton" Content="STOP" HorizontalAlignment="Left" Margin="21,123,0,0" VerticalAlignment="Top" Width="75" Background="#FFC52121" Click="Stopbutton_Click"/>
-            <Button x:Name="Savebutton" Content="SAVE DATA" HorizontalAlignment="Left" Margin="21,197,0,0" VerticalAlignment="Top" Width="75" Click="Savebutton_Click"/>
-            <Button x:Name="Menubutton" Content="MAIN MENU" HorizontalAlignment="Left" Margin="21,274,0,0" VerticalAlignment="Top" Width="75" Click="Menubutton_Click"/>
-            <Button x:Name="Tuning" Content="TUNING" HorizontalAlignment="Left" Margin="21,237,0,0" VerticalAlignment="Top" Width="75" Click="Tuning_Click"/>
-        </Grid>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="startButton_Click"/>
+        <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="stopButton_Click"/>
+        <Button x:Name="SaveButton" Content="Save result" HorizontalAlignment="Left" Margin="26,110,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="saveButton_Click"/>
+        <Button x:Name="modButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="modButton_Click"/>
+        <Button x:Name="MenuButton" Content="Main menu" HorizontalAlignment="Left" Margin="26,611,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="menuButton_Click"/>
+        <Border x:Name="dynoBorder" BorderBrush="#FF787878" BorderThickness="1" HorizontalAlignment="Left" Height="581" VerticalAlignment="Top" Width="1106" Margin="152,60,0,0">
+            <Canvas x:Name="dynoCanvas" HorizontalAlignment="Left" Height="611" VerticalAlignment="Top" Width="1086" Margin="9,9,0,-41"/>
+        </Border>
+        <TextBlock x:Name="hp" Width="100" HorizontalAlignment="Left" Margin="152,25,0,0" TextWrapping="Wrap" Text="HP:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="nm" Width="100" HorizontalAlignment="Left" Margin="257,25,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -184,7 +184,8 @@ namespace virtualdyno3000
             return result;
         }
 
-        public static List<Part> LoadPart(int id = 0)
+        public static List<Part> 
+            LoadPart(int id = 0)
         {
             List<Part> parts = new List<Part>();
             string query;
@@ -222,7 +223,7 @@ namespace virtualdyno3000
                     temp.toughness = int.Parse(dataReader["toughness"].ToString());
                     parts.Add(temp);
                 }
-                dataReader.Close();
+
                 conn.Close();
             }
 

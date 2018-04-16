@@ -24,23 +24,21 @@ namespace virtualdyno3000
         {
             InitializeComponent();
 
+            // Load cars
+            loadCars();
+        }
+
+        private void loadCars()
+        {
             // https://github.com/Microsoft/InteractiveDataDisplay.WPF
             // Creates a list and loads cars from
             // database to it 
             List<Car> cars = new List<Car>();
             cars = DB.LoadCar();
 
-            // Adds datagrid to stackpanel so datagrid is
-            // Always the right height
-            /*
-            DataGrid carGrid = new DataGrid();
-            stackPanel.Children.Add(carGrid);
-            carGrid.IsReadOnly = true;
-            */
-
             // Adds cars from list to datagrid 
             carGrid.ItemsSource = cars;
-    }
+        }
 
         private void addCarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -59,7 +57,7 @@ namespace virtualdyno3000
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
             // Car can be selected using carGrid.SelectedIndex + 1
-            // this returns the cars id
+            // this returns the value equal to the cars id
 
             // Open DynoWindow
             DynoWindow dWindow = new DynoWindow();
@@ -70,7 +68,7 @@ namespace virtualdyno3000
         private void modCarButton_Click(object sender, RoutedEventArgs e)
         {
             // Car can be selected using carGrid.SelectedIndex + 1
-            // this returns the cars id
+            // this returns the value equal to the cars id
 
             Car nCar = new Car();
             // Add ModWindow
@@ -83,6 +81,12 @@ namespace virtualdyno3000
         {
             // Exit application
             this.Close();
+        }
+
+        private void refreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Load cars
+            loadCars();
         }
     }
 }
