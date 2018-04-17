@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="Virtualdyno3000 - New part" Height="400" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Add new part" Height="400" Width="320" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="saveButton_Click"/>
         <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="clearButton_Click"/>

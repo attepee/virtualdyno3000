@@ -55,6 +55,8 @@ namespace virtualdyno3000
             List<Part> parts = new List<Part>();
             parts = DB.LoadPart();
 
+            // Remove items that don't match the selection and add them to partGrid
+            parts.RemoveAll(x => x.parttype != partBox.SelectedIndex + 1);
             partGrid.ItemsSource = parts;
         }
     }
