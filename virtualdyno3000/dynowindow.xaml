@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="DynoWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Virtualdyno3000 - Dyno" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="startButton_Click"/>
         <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="stopButton_Click"/>

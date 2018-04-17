@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:virtualdyno3000"
         mc:Ignorable="d"
-        Title="ModWindow" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Virtualdyno3000 - Modification" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="saveButton_Click" Height="30"/>
         <Button x:Name="dynoButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Click="dynoButton_Click" Height="30"/>
@@ -13,13 +13,12 @@
         <Label x:Name="currentCar" HorizontalAlignment="Left" Height="30" Margin="152,10,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
         <Label Content="Select part" HorizontalAlignment="Left" Height="30" Margin="434,10,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
         <ComboBox x:Name="partBox" HorizontalAlignment="Left" Margin="524,10,0,0" VerticalAlignment="Top" Width="100" Height="30" DropDownClosed="partBox_DropDownClosed">
-            <ComboBoxItem>Engine</ComboBoxItem>
             <ComboBoxItem>Camshaft</ComboBoxItem>
             <ComboBoxItem>Piston</ComboBoxItem>
-            <ComboBoxItem>Injector System</ComboBoxItem>
+            <ComboBoxItem>Injectionsystem</ComboBoxItem>
             <ComboBoxItem>Exhaust</ComboBoxItem>
             <ComboBoxItem>Turbo</ComboBoxItem>
-            <ComboBoxItem>Engine Block</ComboBoxItem>
+            <ComboBoxItem>Block</ComboBoxItem>
         </ComboBox>
         <Button x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="629,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="applyButton_Click"/>
         <DataGrid x:Name="partGrid" HorizontalAlignment="Left" Height="596" Margin="152,45,0,0" VerticalAlignment="Top" Width="1029"/>
