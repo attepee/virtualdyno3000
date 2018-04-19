@@ -22,14 +22,25 @@ namespace virtualdyno3000
         public DynoWindow(Car car)
         {
             InitializeComponent();
+            c = car;
         }
 
         private int ellipselenght = 374;
         private Point currentposition = new Point(0, 228);
 
-
+        public State s = new State();
+        public Car c = new Car();
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
+            s.torgue = 100;
+            s.rpm = 100;
+            for (int i=0; i<50; i++)
+            {
+                s.calcToTime = i;
+                s = Power.Calc(s, c);
+            }
+            
+            
             int h = 0;
             int a = 200;
             int g = 0;
@@ -64,10 +75,10 @@ namespace virtualdyno3000
 
             }
 
-            hp.Text = "HP: 250";
-            nm.Text = "NM: 213";
+            hp.Text = s.rpm.ToString();
+            nm.Text = s.torgue.ToString();
         }
-
+        
         private void stopButton_Click(object sender, RoutedEventArgs e)
         {
             // Stops the dyno

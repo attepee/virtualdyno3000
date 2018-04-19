@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Virtualdyno3000 - Dyno" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="startButton_Click"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="startButton_Click" />
         <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="stopButton_Click"/>
         <Button x:Name="SaveButton" Content="Save result" HorizontalAlignment="Left" Margin="26,110,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="saveButton_Click"/>
         <Button x:Name="modButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="modButton_Click"/>
@@ -15,7 +15,7 @@
         <Border x:Name="dynoBorder" BorderBrush="#FF787878" BorderThickness="1" HorizontalAlignment="Left" Height="581" VerticalAlignment="Top" Width="1106" Margin="152,60,0,0">
             <Canvas x:Name="dynoCanvas" HorizontalAlignment="Left" Height="611" VerticalAlignment="Top" Width="1086" Margin="9,9,0,-41"/>
         </Border>
-        <TextBlock x:Name="hp" Width="100" HorizontalAlignment="Left" Margin="152,25,0,0" TextWrapping="Wrap" Text="HP:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="hp" Width="100" HorizontalAlignment="Left" Margin="152,25,0,0" TextWrapping="Wrap" Text="NM:"  VerticalAlignment="Top"/>
         <TextBlock x:Name="nm" Width="100" HorizontalAlignment="Left" Margin="257,25,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
     </Grid>
 </Window>
