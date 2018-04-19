@@ -106,8 +106,10 @@ namespace virtualdyno3000
 
             for (double d = 0; d < time;)
             {
+                double round = 60 / s.rpm;
+                s.rpm =+ 2;
+                d =+ round;
                 s.torgue++;
-                s.rpm = +2;
             }
             s.lastCalcTime = s.calcToTime;
             return s;
