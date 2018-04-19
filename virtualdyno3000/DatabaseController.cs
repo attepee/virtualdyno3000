@@ -111,7 +111,7 @@ namespace virtualdyno3000
         public static bool UpdateCar(Car c)
         {
             bool result = false;
-            string query = string.Format("update cartable set manufacturer = '{0}', model = '{1}', engine = {2}, year = {3}, camshaft = {4}, piston = {5}, injectsystem = {6}, exhaust = {7}, turbo = {8}, block = {9}, broke = {10} where carId = {11};", c.manufacturer, c.model, c.engine, c.year, c.camshaft, c.piston, c.injectionsystem, c.exhaust, c.turbo, c.block, c.broke, c.id);
+            string query = string.Format("update cartable set manufacturer = '{0}', model = '{1}', engine = {2}, year = {3}, camshaft = {4}, piston = {5}, injectsystem = {6}, exhaust = {7}, turbo = {8}, block = {9}, broke = {10} where carId = {11};", c.manufacturer, c.model, c.engine.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture), c.year, c.camshaft, c.piston, c.injectionsystem, c.exhaust, c.turbo, c.block, c.broke, c.id);
 
             try
             {
