@@ -56,27 +56,38 @@ namespace virtualdyno3000
 
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
-            // Car can be selected using carGrid.SelectedIndex + 1
-            // this returns the value equal to the cars id
+            // Cast selected car to nCar
+            Car nCar = (Car)carGrid.SelectedItem;
 
-            // Open DynoWindow
-            //int carId = carGrid.SelectedIndex + 1;
-
-            DynoWindow dWindow = new DynoWindow(/*carId*/);
-            dWindow.Show();
-            this.Close();
+            if (nCar != null)
+            {
+                // Open DynoWindow
+                DynoWindow nDynoWindow = new DynoWindow(nCar);
+                nDynoWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Select a car");
+            }
         }
 
         private void modCarButton_Click(object sender, RoutedEventArgs e)
         {
-            // Car can be selected using carGrid.SelectedIndex + 1
-            // this returns the value equal to the cars id
+            // Cast selected car to nCar
+            Car nCar = (Car)carGrid.SelectedItem;
 
-            Car nCar = new Car();
-            // Add ModWindow
-            ModWindow mWindow = new ModWindow(nCar);
-            mWindow.Show();
-            this.Close();
+            if (nCar != null)
+            {
+                // Open DynoWindow
+                ModWindow nModWindow = new ModWindow(nCar);
+                nModWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Select a car");
+            }
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)

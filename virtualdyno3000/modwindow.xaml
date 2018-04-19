@@ -21,7 +21,7 @@
             <ComboBoxItem>Block</ComboBoxItem>
         </ComboBox>
         <Button x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="629,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="applyButton_Click"/>
-        <DataGrid x:Name="partGrid" HorizontalAlignment="Left" Height="596" Margin="152,45,0,0" VerticalAlignment="Top" Width="1029"/>
+        <DataGrid x:Name="partGrid" HorizontalAlignment="Left" Height="596" Margin="152,45,0,0" VerticalAlignment="Top" Width="1106" IsReadOnly="True"/>
     </Grid>
 
 </Window>
