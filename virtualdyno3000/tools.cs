@@ -93,7 +93,7 @@ namespace virtualdyno3000
 
         public static State Calc(State s, Car c)
         {
-            const double targetAfr = 12.5;
+            /*const double targetAfr = 12.5;
             double time = s.calcToTime - s.lastCalcTime;
 
             for (double d = 0; d < time;)
@@ -101,7 +101,15 @@ namespace virtualdyno3000
                 double round = 60/s.rpm;
                 d =+ round;
             }
+            */
+            double time = s.calcToTime - s.lastCalcTime;
 
+            for (double d = 0; d < time;)
+            {
+                s.torgue++;
+                s.rpm = +2;
+            }
+            s.lastCalcTime = s.calcToTime;
             return s;
         }
     }
