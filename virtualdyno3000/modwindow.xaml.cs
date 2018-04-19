@@ -19,9 +19,10 @@ namespace virtualdyno3000
     /// </summary>
     public partial class ModWindow : Window
     {
-        public ModWindow(Car c)
+        public ModWindow(Car car)
         {
             InitializeComponent();
+            currentCar.Content = car.manufacturer.ToString() + " " + car.model.ToString();
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
@@ -31,7 +32,7 @@ namespace virtualdyno3000
 
         private void applyButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            // Add selected part to car
         }
 
         private void mainButton_Click(object sender, RoutedEventArgs e)
@@ -43,8 +44,10 @@ namespace virtualdyno3000
         }
         private void dynoButton_Click(object sender, RoutedEventArgs e)
         {
+            Car car = new Car();
+
             // Closes this and open dynowindow
-            DynoWindow dwin = new DynoWindow();
+            DynoWindow dwin = new DynoWindow(car);
             dwin.Show();
             this.Close();
         }
