@@ -19,20 +19,66 @@ namespace virtualdyno3000
     /// </summary>
     public partial class ModWindow : Window
     {
+        private Car carToModify;
+
         public ModWindow(Car car)
         {
             InitializeComponent();
+
+            carToModify = car;
+
+            // Show current cars manufacturer and model
             currentCar.Content = car.manufacturer.ToString() + " " + car.model.ToString();
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             // Save car configuration to db
+            if (DB.UpdateCar(carToModify))
+            {
+                // If car is saved to db
+                info.Content = "Car saved";
+            }
+            else
+            {
+                info.Content = "Something wrong. Car not saved";
+            }
         }
 
         private void applyButton_Click(object sender, RoutedEventArgs e)
         {
             // Add selected part to car
+            // Add selected part to nPart
+            Part nPart = (Part)partGrid.SelectedItem;
+
+            // Switchcase for different parttypes
+            switch (nPart.parttype)
+            {
+                case 1:
+                    carToModify.camshaft = nPart.id;
+                    info.Content = "Camshaft changed";
+                    break;
+                case 2:
+                    carToModify.piston = nPart.id;
+                    info.Content = "Piston changed";
+                    break;
+                case 3:
+                    carToModify.injectionsystem = nPart.id;
+                    info.Content = "Injectionsystem changed";
+                    break;
+                case 4:
+                    carToModify.exhaust = nPart.id;
+                    info.Content = "Exhaust changed";
+                    break;
+                case 5:
+                    carToModify.turbo = nPart.id;
+                    info.Content = "Turbo changed";
+                    break;
+                case 6:
+                    carToModify.block = nPart.id;
+                    info.Content = "Block changed";
+                    break;
+            }
         }
 
         private void mainButton_Click(object sender, RoutedEventArgs e)
@@ -44,10 +90,8 @@ namespace virtualdyno3000
         }
         private void dynoButton_Click(object sender, RoutedEventArgs e)
         {
-            Car car = new Car();
-
             // Closes this and open dynowindow
-            DynoWindow dwin = new DynoWindow(car);
+            DynoWindow dwin = new DynoWindow(carToModify);
             dwin.Show();
             this.Close();
         }

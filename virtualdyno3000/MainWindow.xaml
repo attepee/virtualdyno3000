@@ -12,7 +12,7 @@
         <Button x:Name="testCarButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,110,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="testCarButton_Click"/>
         <Button x:Name="modCarButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="modCarButton_Click"/>
         <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="26,611,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="exitButton_Click"/>
-        <DataGrid x:Name="carGrid" Height="631" Margin="152,10,0,0" VerticalAlignment="Top" Width="1106" IsReadOnly="True" HorizontalAlignment="Left"/>
+        <DataGrid x:Name="carGrid" Height="631" Margin="152,10,0,0" VerticalAlignment="Top" Width="1106" IsReadOnly="True" HorizontalAlignment="Left" ColumnWidth="*"/>
         <Button x:Name="refreshButton" Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="30" Margin="1158,646,0,0" Click="refreshButton_Click"/>
     </Grid>
 </Window>
