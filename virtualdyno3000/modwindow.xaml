@@ -7,10 +7,9 @@
         mc:Ignorable="d"
         Title="Virtualdyno3000 - Modification" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="saveButton_Click" Height="30"/>
-        <Button x:Name="dynoButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Click="dynoButton_Click" Height="30"/>
+        <Button x:Name="dynoButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Click="dynoButton_Click" Height="30"/>
         <Button x:Name="mainButotn" Content="Main menu" HorizontalAlignment="Left" Margin="26,611,0,0" VerticalAlignment="Top" Width="100" Click="mainButton_Click" Height="30"/>
-        <Label x:Name="currentCar" HorizontalAlignment="Left" Height="30" Margin="152,10,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
+        <Label x:Name="currentCar" HorizontalAlignment="Left" Height="30" Margin="152,10,0,0" VerticalAlignment="Top" Width="277" FontSize="16"/>
         <Label Content="Select part" HorizontalAlignment="Left" Height="30" Margin="434,10,0,0" VerticalAlignment="Top" Width="85" FontSize="16"/>
         <ComboBox x:Name="partBox" HorizontalAlignment="Left" Margin="524,10,0,0" VerticalAlignment="Top" Width="100" Height="30" DropDownClosed="partBox_DropDownClosed">
             <ComboBoxItem>Camshaft</ComboBoxItem>
@@ -21,7 +20,9 @@
             <ComboBoxItem>Block</ComboBoxItem>
         </ComboBox>
         <Button x:Name="applyButton" Content="Apply" HorizontalAlignment="Left" Margin="629,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="applyButton_Click"/>
-        <DataGrid x:Name="partGrid" HorizontalAlignment="Left" Height="596" Margin="152,45,0,0" VerticalAlignment="Top" Width="1106" IsReadOnly="True"/>
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="734,10,0,0" VerticalAlignment="Top" Width="100" Click="saveButton_Click" Height="30"/>
+        <Label x:Name="info" HorizontalAlignment="Left" Height="30" Margin="839,10,0,0" VerticalAlignment="Top" Width="419" FontSize="16"/>
+        <DataGrid x:Name="partGrid" HorizontalAlignment="Left" Height="596" Margin="152,45,0,0" VerticalAlignment="Top" Width="1106" IsReadOnly="True" ColumnWidth="*"/>
     </Grid>
 
 </Window>
