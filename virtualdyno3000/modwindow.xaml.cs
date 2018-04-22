@@ -31,6 +31,17 @@ namespace virtualdyno3000
             currentCar.Content = car.manufacturer.ToString() + " " + car.model.ToString();
         }
 
+        private void loadParts()
+        {
+            // Creates a list and loads parts from database to it 
+            List<Part> parts = new List<Part>();
+            parts = DB.LoadPart();
+
+            // Remove items that don't match the selection and add them to partGrid
+            parts.RemoveAll(x => x.parttype != partBox.SelectedIndex + 1);
+            partGrid.ItemsSource = parts;
+        }
+
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             // Save car configuration to db
@@ -98,13 +109,27 @@ namespace virtualdyno3000
 
         private void partBox_DropDownClosed(object sender, EventArgs e)
         {
-            // Creates a list and loads parts from database to it 
-            List<Part> parts = new List<Part>();
-            parts = DB.LoadPart();
+            loadParts();
+        }
 
-            // Remove items that don't match the selection and add them to partGrid
-            parts.RemoveAll(x => x.parttype != partBox.SelectedIndex + 1);
-            partGrid.ItemsSource = parts;
+        private void modifyPartButton_Click(object sender, RoutedEventArgs e)
+        {
+            Part nPart = (Part)partGrid.SelectedItem;
+
+            if (nPart != null)
+            {
+                ModifyPartWindow nModPartWindow = new ModifyPartWindow(nPart);
+                nModPartWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a part");
+            }
+        }
+
+        private void refreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            loadParts();
         }
     }
 }

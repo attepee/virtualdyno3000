@@ -66,6 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ModifyPartWindow.xaml.cs">
+      <DependentUpon>ModifyPartWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="tools.cs" />
     <Page Include="DynoWindow.xaml">
       <SubType>Designer</SubType>
@@ -88,6 +91,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifyPartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ModWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
