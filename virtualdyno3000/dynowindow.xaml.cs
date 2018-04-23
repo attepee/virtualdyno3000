@@ -42,6 +42,9 @@ namespace virtualdyno3000
             int a = r.Next(525, 570);
             int h = -5;
             //int a = 570;
+            Random re = new Random();
+            int o = re.Next(325, 400);
+            int j = -5;
             for (int x = 0; x < 10; x++)
             {
                 Random fa = new Random();
@@ -64,13 +67,32 @@ namespace virtualdyno3000
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
 
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(2, 3);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o - l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
             }
             for (int x = 0; x < 10; x++)
             {
                 Random fa = new Random();
-                int f = fa.Next(7, 12);
+                int f = fa.Next(9, 12);
                 Random fau = new Random();
-                int p = fau.Next(6, 9);
+                int p = fau.Next(7, 9);
                 await Task.Delay(150);
 
                 Line objLine = new Line();
@@ -86,14 +108,33 @@ namespace virtualdyno3000
                 objLine.X2 = h;
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(2, 3);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o + l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
 
             }
             for (int x = 0; x < 10; x++)
             {
                 Random fa = new Random();
-                int f = fa.Next(8, 14);
+                int f = fa.Next(10, 14);
                 Random fau = new Random();
-                int p = fau.Next(4, 9);
+                int p = fau.Next(8, 9);
                 await Task.Delay(150);
 
                 Line objLine = new Line();
@@ -109,12 +150,31 @@ namespace virtualdyno3000
                 objLine.X2 = h;
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(3, 4);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o + l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
 
             }
             for (int x = 0; x < 10; x++)
             {
                 Random fa = new Random();
-                int f = fa.Next(8, 14);
+                int f = fa.Next(1, 14);
                 Random fau = new Random();
                 int p = fau.Next(2, 6);
                 await Task.Delay(150);
@@ -132,6 +192,25 @@ namespace virtualdyno3000
                 objLine.X2 = h;
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(5, 6);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o + l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
 
             }
             for (int x = 0; x < 10; x++)
@@ -155,6 +234,25 @@ namespace virtualdyno3000
                 objLine.X2 = h;
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(6, 7);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o + l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
 
             }
             for (int x = 0; x < 10; x++)
@@ -178,6 +276,25 @@ namespace virtualdyno3000
                 objLine.X2 = h;
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(1, 2);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o + l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
 
             }
             for (int x = 0; x < 10; x++)
@@ -201,6 +318,25 @@ namespace virtualdyno3000
                 objLine.X2 = h;
                 objLine.Y2 = a;
                 dynoCanvas.Children.Add(objLine);
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(0, 1);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o + l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
 
             }
             for (int x = 0; x < 30; x++)
@@ -230,7 +366,7 @@ namespace virtualdyno3000
 
   
      
-            for (int x = 0; x < 480; x++)
+          /*  for (int x = 0; x < 480; x++)
             {
                // await Task.Delay(1);
 
@@ -247,7 +383,7 @@ namespace virtualdyno3000
                 dynoCanvas.Children.Add(objLine);
                // h = (h + 1);
                 a = (a + 1);
-            }
+            }*/
 
 
             hp.Text = s.rpm.ToString();
