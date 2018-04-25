@@ -98,12 +98,12 @@ namespace virtualdyno3000
             if(currentCar != c)
             {
                 currentCar = c;
-                cam = DB.LoadPart(c.camshaft).First();
-                piston = DB.LoadPart(c.piston).First();
-              //  inject = DB.LoadPart(c.injectionsystem).First();
-                exh = DB.LoadPart(c.exhaust).First();
-                turbo = DB.LoadPart(c.turbo).First();
-               // block = DB.LoadPart(c.block).First();
+                cam = DB.LoadPart(c.camshaft).FirstOrDefault();
+                piston = DB.LoadPart(c.piston).FirstOrDefault();
+                inject = DB.LoadPart(c.injectionsystem).FirstOrDefault();
+                exh = DB.LoadPart(c.exhaust).FirstOrDefault();
+                turbo = DB.LoadPart(c.turbo).FirstOrDefault();
+                block = DB.LoadPart(c.block).FirstOrDefault();
                 stroke = 1;
                 m = new Mixture();
             }
