@@ -136,7 +136,7 @@ namespace virtualdyno3000
                 }
 
                 //assigning next stroke
-                if (stroke <= 4)
+                if (stroke < 4)
                 {
                     stroke++;
                 }
