@@ -17,5 +17,6 @@
         </Border>
         <TextBlock x:Name="hp" Width="100" HorizontalAlignment="Left" Margin="152,25,0,0" TextWrapping="Wrap" Text="NM:"  VerticalAlignment="Top"/>
         <TextBlock x:Name="nm" Width="100" HorizontalAlignment="Left" Margin="257,25,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
+        <Button Content="testinappi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="26,265,0,0" Click="Button_Click"/>
     </Grid>
 </Window>

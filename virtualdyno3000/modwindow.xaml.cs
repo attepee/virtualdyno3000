@@ -66,27 +66,27 @@ namespace virtualdyno3000
             switch (nPart.parttype)
             {
                 case 1:
-                    carToModify.camshaft = nPart.id;
+                    carToModify.camshaft = nPart.stage;
                     info.Content = "Camshaft changed";
                     break;
                 case 2:
-                    carToModify.piston = nPart.id;
+                    carToModify.piston = nPart.stage;
                     info.Content = "Piston changed";
                     break;
                 case 3:
-                    carToModify.injectionsystem = nPart.id;
+                    carToModify.injectionsystem = nPart.stage;
                     info.Content = "Injectionsystem changed";
                     break;
                 case 4:
-                    carToModify.exhaust = nPart.id;
+                    carToModify.exhaust = nPart.stage;
                     info.Content = "Exhaust changed";
                     break;
                 case 5:
-                    carToModify.turbo = nPart.id;
+                    carToModify.turbo = nPart.stage;
                     info.Content = "Turbo changed";
                     break;
                 case 6:
-                    carToModify.block = nPart.id;
+                    carToModify.block = nPart.stage;
                     info.Content = "Block changed";
                     break;
             }

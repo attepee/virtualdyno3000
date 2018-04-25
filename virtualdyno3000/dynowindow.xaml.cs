@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using System.Threading;
 
 namespace virtualdyno3000
 {
@@ -19,14 +21,15 @@ namespace virtualdyno3000
     /// </summary>
     public partial class DynoWindow : Window
     {
+        public State s = new State();
+        public Car c = new Car();
+
         public DynoWindow(Car car)
         {
             InitializeComponent();
             c = car;
         }
 
-        public State s = new State();
-        public Car c = new Car();
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
             s.torgue = 100;
@@ -415,6 +418,23 @@ namespace virtualdyno3000
             ModWindow modWundow = new ModWindow(auto);
             modWundow.Show();
             this.Close();
+        }
+
+        //tän voi sit ihan poistella kun on laskuri valmis. penkittelen tuota laskuria tällä ettei se ala jumittaa
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            s.rpm = 100;
+            s.calcToTime = 10;
+
+            stopwatch.Start();
+            Power.Calc(s, c);
+            stopwatch.Stop();
+
+            //mk1 osien muunto arvoiksi ja ajon alustus ja kierrosten keston laskenta
+            //00:00:00.0004999 eka ajo
+            //00:00:00.0000010 toinen pyöräytys samalla oliolla
+            TimeSpan t = stopwatch.Elapsed;
         }
     }
 }
