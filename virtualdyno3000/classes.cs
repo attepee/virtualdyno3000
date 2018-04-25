@@ -31,14 +31,25 @@ namespace virtualdyno3000
         public int stage { get; set; }
         public int toughness { get; set; }
     }
+
     public class State
     {
         public double torgue { get; set; }
-        public int rpm { get; set; }
+        public double rpm { get; set; }
         public double lastCalcTime { get; set; }
         public double calcToTime { get; set; }
         public bool broke { get; set; }
+    }
 
+    public class Mixture
+    {
+        public double torgue { get; set; }
+        public double rpm { get; set; }
+        public double gas { get; set; }
+        public double air { get; set; }
+        public double compression { get; set; }
+        public double smoke { get; set; } //??? :DDD
+        public double round { get; set; }
     }
 
 }

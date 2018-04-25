@@ -81,13 +81,10 @@ namespace virtualdyno3000
     /// </summary>
     static class Power
     {
-        private static Car currentCar = new Car();
-        private static double cam;
-        private static double piston;
-        private static double inject;
-        private static double exh;
-        private static double turbo;
+        private static Car currentCar;
+        private static Part cam, piston, inject, exh, turbo, block;
         private static int stroke;
+        private static Mixture m;
 
         /// <summary>
         /// Claculates power output and rpm increase of a car on specified timeframe.
@@ -97,39 +94,49 @@ namespace virtualdyno3000
         /// <returns></returns>
         public static State Calc(State s, Car c)
         {
+            //check if continuing with same car, else format calc for new car
             if(currentCar != c)
             {
                 currentCar = c;
-                cam = GetSpec(c.camshaft, 1);
-                piston = GetSpec(c.piston, 2);
-                inject = GetSpec(c.injectionsystem, 3);
-                exh = GetSpec(c.exhaust, 4);
-                turbo = GetSpec(c.turbo, 5);
+                cam = DB.LoadPart(c.camshaft).First();
+                piston = DB.LoadPart(c.piston).First();
+              //  inject = DB.LoadPart(c.injectionsystem).First();
+                exh = DB.LoadPart(c.exhaust).First();
+                turbo = DB.LoadPart(c.turbo).First();
+               // block = DB.LoadPart(c.block).First();
                 stroke = 1;
+                m = new Mixture();
             }
 
-            const double targetAfr = 12.5;
+            //const double targetAfr = 12.5;
+
+            //calculate time that we run
             double time = s.calcToTime - s.lastCalcTime;
 
+            //Actually start the simulation
             for (double d = 0; d < time;)
             {
-                double round = (double)60 / s.rpm;
+                m.round = 60 / s.rpm;
 
                 //executing current stroke
                 switch (stroke)
                 {
                     case 1:
+                        m = Suck(m);
                         break;
                     case 2:
+                        m = Squeeze(m);
                         break;
                     case 3:
+                        m = Bang(m);
                         break;
                     case 4:
+                        m = Blow(m);
                         break;
                 }
 
                 //assigning next stroke
-                if (stroke >= 4)
+                if (stroke <= 4)
                 {
                     stroke++;
                 }
@@ -139,143 +146,37 @@ namespace virtualdyno3000
                 }
 
                 //calculating total time elapsed.
-                d = d + (round/2);
+                d = d + (m.round/2);
             }
+            s.rpm = m.rpm;
+            s.torgue = m.torgue;
             //s.lastCalcTime = s.calcToTime;
             s.lastCalcTime = 0;
             return s;
         }
 
-
-        /// <summary>
-        /// pls dont mind me, just a horrible hack ))
-        /// </summary>
-        /// <param name="stage"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        private static double GetSpec(int stage, int type)
+        private static Mixture Suck(Mixture mIn)
         {
-            double d = 0;
-
-            switch (type)
-            {
-                case 1:
-                    //case for camshaft
-                    switch (stage)
-                    {
-                        case 0:
-                            d = 3.2;
-                            break;
-                        case 1:
-                            d = 5.5;
-                            break;
-                        case 2:
-                            d = 7;
-                            break;
-                        case 3:
-                            d = 8.7;
-                            break;
-                        case 4:
-                            d = 10.5;
-                            break;
-                    }
-                    break;
-
-                case 2:
-                    //case for piston
-                    switch (stage)
-                    {
-                        case 0:
-                            d = 0;
-                            break;
-                        case 1:
-                            d = 0;
-                            break;
-                        case 2:
-                            d = 0;
-                            break;
-                        case 3:
-                            d = 0;
-                            break;
-                        case 4:
-                            d = 0;
-                            break;
-                    }
-                    break;
-
-                case 3:
-                    //case for injection system
-                    switch (stage)
-                    {
-                        case 0:
-                            d = 0;
-                            break;
-                        case 1:
-                            d = 0;
-                            break;
-                        case 2:
-                            d = 0;
-                            break;
-                        case 3:
-                            d = 0;
-                            break;
-                        case 4:
-                            d = 0;
-                            break;
-                    }
-                    break;
-
-                case 4:
-                    //case for exhaust
-                    switch (stage)
-                    {
-                        case 0:
-                            d = 0;
-                            break;
-                        case 1:
-                            d = 0;
-                            break;
-                        case 2:
-                            d = 0;
-                            break;
-                        case 3:
-                            d = 0;
-                            break;
-                        case 4:
-                            d = 0;
-                            break;
-                    }
-                    break;
-
-                case 5:
-                    //case for turbo
-                    switch (stage)
-                    {
-                        case 0:
-                            d = 0;
-                            break;
-                        case 1:
-                            d = 0;
-                            break;
-                        case 2:
-                            d = 0;
-                            break;
-                        case 3:
-                            d = 0;
-                            break;
-                        case 4:
-                            d = 0;
-                            break;
-                    }
-                    break;
-
-                default:
-                    //should not land here but well if it does assign something to the part, results may suprise depending on the part. kjäh :D
-                    d = 90.01;
-                    break;
-            }
-            return d;
+            Mixture mOut = mIn;
+            return mOut;
         }
-        
+
+        private static Mixture Squeeze(Mixture mIn)
+        {
+            Mixture mOut = mIn;
+            return mOut;
+        }
+
+        private static Mixture Bang(Mixture mIn)
+        {
+            Mixture mOut = mIn;
+            return mOut;
+        }
+
+        private static Mixture Blow(Mixture mIn)
+        {
+            Mixture mOut = mIn;
+            return mOut;
+        }
     }
 }

@@ -434,6 +434,11 @@ namespace virtualdyno3000
             //mk1 osien muunto arvoiksi ja ajon alustus ja kierrosten keston laskenta
             //00:00:00.0004999 eka ajo
             //00:00:00.0000010 toinen pyöräytys samalla oliolla
+
+
+            //mk2 hakulogiikka muutettu osat objekteina
+            //00:00:00.5334331 eka ajo, tietokanta jarruttelee.. olkoon ei haittaa käytännössä
+            //00:00:00.0000017 toinen
             TimeSpan t = stopwatch.Elapsed;
         }
     }
