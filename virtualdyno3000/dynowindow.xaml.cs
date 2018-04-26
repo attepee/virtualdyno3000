@@ -439,6 +439,11 @@ namespace virtualdyno3000
             //mk2 hakulogiikka muutettu osat objekteina
             //00:00:00.5334331 eka ajo, tietokanta jarruttelee.. olkoon ei haittaa käytännössä
             //00:00:00.0000017 toinen
+
+            //mk3 lisätty imu tahti
+            //Elapsed	{00:00:00.9495005}	System.TimeSpan
+            //Elapsed	{00:00:00.0000079}	System.TimeSpan
+
             TimeSpan t = stopwatch.Elapsed;
         }
     }

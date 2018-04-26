@@ -30,6 +30,7 @@ namespace virtualdyno3000
         public int parttype { get; set; }
         public int stage { get; set; }
         public int toughness { get; set; }
+        public double effect { get; set; } //vituiks meni
     }
 
     public class State
@@ -43,13 +44,12 @@ namespace virtualdyno3000
 
     public class Mixture
     {
-        public double torgue { get; set; }
-        public double rpm { get; set; }
         public double gas { get; set; }
         public double air { get; set; }
         public double compression { get; set; }
         public double smoke { get; set; } //??? :DDD
         public double round { get; set; }
+        public double exhaustVelocity { get; set; }
     }
 
 }
