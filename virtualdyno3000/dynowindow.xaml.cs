@@ -640,12 +640,86 @@ namespace virtualdyno3000
         //tän voi sit ihan poistella kun on laskuri valmis. penkittelen tuota laskuria tällä ettei se ala jumittaa
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            int h = -5;
+            int a = 570;
             s.rpm = 1900;
             s.calcToTime = 7;
             s = Power.Calc(s, c);
+            for (int i = 0; i < 300 /*s.rpmPerRev.Count*/; i++)
+            {
+                Random fa = new Random();
+                int f = fa.Next(1, 15);
+                Random fau = new Random();
+                int p = fau.Next(1, 12);
 
+                int point = (int)Math.Round(s.rpmPerRev[i]);
+                int points = (int)Math.Round(s.torquePerRev[i]);
+                Line objLine = new Line();
+                objLine.Stroke = System.Windows.Media.Brushes.Black;
+                objLine.Fill = System.Windows.Media.Brushes.Black;
 
+                //start
+                objLine.X1 = h;
+                objLine.Y1 = a;
+                //end
+                point = (point /10);
+                points = (points /1);
+                objLine.X2 = point;
+                objLine.Y2 = points;
+                dynoCanvas.Children.Add(objLine);
+                h = (point);
+                a = (points);
+            }
+
+           /* Random r = new Random();
+            int a = r.Next(525, 570);
+            int h = -5;
+            //int a = 570;
+            Random re = new Random();
+            int o = re.Next(325, 400);
+            int j = -5;
+            for (int x = 0; x < 10; x++)
+            {
+                Random fa = new Random();
+                int f = fa.Next(1, 15);
+                Random fau = new Random();
+                int p = fau.Next(1, 12);
+               
+
+                Line objLine = new Line();
+                objLine.Stroke = System.Windows.Media.Brushes.Black;
+                objLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                objLine.X1 = h;
+                objLine.Y1 = a;
+                //end
+                h = (h + f);
+                a = (a - p);
+                objLine.X2 = h;
+                objLine.Y2 = a;
+                dynoCanvas.Children.Add(objLine);
+
+                Random fax = new Random();
+                int k = fax.Next(9, 15);
+                Random faxx = new Random();
+                int l = faxx.Next(2, 3);
+                await Task.Delay(150);
+
+                Line sobjeLine = new Line();
+                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                //start
+                sobjeLine.X1 = j;
+                sobjeLine.Y1 = o;
+                //end
+                o = (o - l);
+                j = (j + k);
+                sobjeLine.X2 = j;
+                sobjeLine.Y2 = o;
+                dynoCanvas.Children.Add(sobjeLine);
+            }*/
 
             /*Stopwatch stopwatch = new Stopwatch();
             s.rpm = 100;
@@ -672,7 +746,7 @@ namespace virtualdyno3000
             */
 
 
-            
+
 
         }
     }
