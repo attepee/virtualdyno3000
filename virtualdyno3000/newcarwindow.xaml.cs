@@ -39,7 +39,7 @@ namespace virtualdyno3000
                 c.model = model.Text;
                 c.engine = Tools.ConvertToDouble(engine.Text);
                 c.year = int.Parse(year.Text);
-                c.camshaft = 46;
+                c.camshaft = 106;
                 c.piston = 47;
                 c.injectionsystem = 48;
                 c.exhaust = 49;
