@@ -1,12 +1,12 @@
 ## Ohjelmoinnin harjoitustyö - Virtualdyno3000
 
-### Sovelluksen yleiskuvaus
+### Ohjelma yleiskuvaus
 
-Auto aiheinen sovellus, jolla voidaan koota auton kokoonpano valittavissa olevista osista ja testata kokoonpanon teho.
+Virtualdyno3000:lla voidaan kasata autojen kokoonpanoja eri osista ja testata niitä virtuaalidynolla.
 
 #### Kohdeyleisö
 
-Autoista ja niiden tuunaamisesta kiinnostuneet.
+Ohjelman kohdeyleisönä on autoista ja niiden tuunaamisesta kiinnostuneet.
 
 #### Käyttöympäristö ja teknologiat
 
@@ -23,7 +23,7 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 
 #### Käsitemalli
 
-
+![Käsitemalli](Images/kasitemalli.png)
 
 ### Tekijät ja työnjako
 
@@ -35,8 +35,8 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 
 #### Työaikasuunnitelma
 
-| Työn osa | Valmis |
-| - | - |
-| Suunnitelma | 8.4. |
-| Ikkunat | Ennen 24.4. |
-| Harjoitustyö | 25.4. |
+| Työn osa     | Valmis      |
+| --------     | ----------- |
+| Suunnitelma  | 8.4.        |
+| Ikkunat      | Viim. 24.4. |
+| Harjoitustyö | 25.4.       |
