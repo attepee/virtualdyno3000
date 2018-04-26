@@ -30,11 +30,12 @@ namespace virtualdyno3000
             c = car;
         }
 
+        private bool loop = true;
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
+            loop = false;
             s.rpm = 1900;
             s.calcToTime = 10;
-
             Car reset = new Car();
             State resetS = new State();
             Power.Calc(resetS, reset);
@@ -44,8 +45,9 @@ namespace virtualdyno3000
             int h = -5;
             int a = 570;
 
-            for (int i = 0; i < (s.rpmPerRev.Count() - 1); i++)
+            for (int i = 0; i < (s.rpmPerRev.Count() - 1) && !loop; i++)
             {
+
                 Line objLineTorq = new Line();
                 Line objLineRpm = new Line();
                 objLineTorq.Stroke = System.Windows.Media.Brushes.Black;
@@ -84,6 +86,7 @@ namespace virtualdyno3000
 
         private void stopButton_Click(object sender, RoutedEventArgs e)
         {
+            loop = true;
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
