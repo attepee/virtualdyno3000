@@ -1,30 +1,35 @@
-# Ohjelmoinnin harjoitustyö - Virtualdyno3000
+## Ohjelmoinnin harjoitustyö - Virtualdyno3000
 
-## Asennus
+### Asennus
 
 
 
-## Ohjelma
+### Ohjelma
 
 Virtualdyno3000:lla voidaan kasata autojen kokoonpanoja eri osista ja testata niitä virtuaalidynolla.
 
-### Toteutuneet toiminnot
+#### Toteutuneet toiminnot
 
 * Kokoonpanon kasaaminen valittavissa olevista osista
 
-### Toteutumattomat toiminnot
+#### Toteutumattomat toiminnot
 
 * Kokoonpanojen ja testitulosten tallentaminen tietokantaan
 
-## Ongelmat ja bugit
+#### Käyttöohje/käyttöliittymä
 
 
 
-## Mitä opittiin
+### Ongelmat ja bugit
+
+* Toistaiseksi ohjelma on todettu toimivaksi Windows 7 ja -10 -käyttöjärjestelmillä.
+* Ohjelman käyttöä varten täytyy olla joko JAMK Labranetin verkossa tai sinne on oltava VPN-yhteys Labranetin verkossa sijaitsevan tietokannan vuoksi
+
+### Mitä opittiin
 
 
 
-## Vastuiden ja työmäärän jakautuminen
+### Vastuiden ja työmäärän jakautuminen
 
 | Tekijä                                              | Vastuu                                                                   |
 | --------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -32,5 +37,5 @@ Virtualdyno3000:lla voidaan kasata autojen kokoonpanoja eri osista ja testata ni
 | [Niklas Hietaranta](https://github.com/niklashieta) | Testigrafiikka, DynoWindow                                               |
 | [Atte Pekkarinen](https://github.com/attepee)       | Dokumentaatio, MainWindow, NewPartWindow, NewCarWindow, ModyfyPartWindow |
 
-## Arvosanaehdotus
+### Arvosanaehdotus
 
