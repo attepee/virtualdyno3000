@@ -34,13 +34,17 @@ namespace virtualdyno3000
         {
             s.torque = 100;
             s.rpm = 100;
-            for (int i=0; i<50; i++)
+            for (int i = 0; i < 50; i++)
             {
                 s.calcToTime = i;
                 s = Power.Calc(s, c);
 
             }
-            
+            hp.Text = s.rpm.ToString();
+            nm.Text = s.torque.ToString();
+            double HPTT = (s.rpm * s.torque / 9000.5488);
+            HPY.Text = HPTT.ToString();
+
             Random r = new Random();
             int a = r.Next(525, 570);
             int h = -5;
@@ -132,6 +136,30 @@ namespace virtualdyno3000
                 dynoCanvas.Children.Add(sobjeLine);
 
             }
+            for (int x = 0; x < 8; x++)
+            {
+                Random fa = new Random();
+                int f = fa.Next(9, 12);
+                Random fau = new Random();
+                int p = fau.Next(7, 9);
+                await Task.Delay(150);
+
+                Line objLine = new Line();
+                objLine.Stroke = System.Windows.Media.Brushes.Black;
+                objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                //start
+                objLine.X1 = h;
+                objLine.Y1 = a;
+                //end
+                h = (h + f);
+                a = (a - p);
+                objLine.X2 = h;
+                objLine.Y2 = a;
+                dynoCanvas.Children.Add(objLine);
+
+
+            }
             for (int x = 0; x < 10; x++)
             {
                 Random fa = new Random();
@@ -174,48 +202,7 @@ namespace virtualdyno3000
                 dynoCanvas.Children.Add(sobjeLine);
 
             }
-            for (int x = 0; x < 10; x++)
-            {
-                Random fa = new Random();
-                int f = fa.Next(1, 14);
-                Random fau = new Random();
-                int p = fau.Next(2, 6);
-                await Task.Delay(150);
 
-                Line objLine = new Line();
-                objLine.Stroke = System.Windows.Media.Brushes.Black;
-                objLine.Fill = System.Windows.Media.Brushes.Black;
-
-                //start
-                objLine.X1 = h;
-                objLine.Y1 = a;
-                //end
-                h = (h + f);
-                a = (a - p);
-                objLine.X2 = h;
-                objLine.Y2 = a;
-                dynoCanvas.Children.Add(objLine);
-                Random fax = new Random();
-                int k = fax.Next(9, 15);
-                Random faxx = new Random();
-                int l = faxx.Next(5, 6);
-                await Task.Delay(150);
-
-                Line sobjeLine = new Line();
-                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
-                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
-
-                //start
-                sobjeLine.X1 = j;
-                sobjeLine.Y1 = o;
-                //end
-                o = (o + l);
-                j = (j + k);
-                sobjeLine.X2 = j;
-                sobjeLine.Y2 = o;
-                dynoCanvas.Children.Add(sobjeLine);
-
-            }
             for (int x = 0; x < 10; x++)
             {
                 Random fa = new Random();
@@ -260,138 +247,368 @@ namespace virtualdyno3000
             }
             for (int x = 0; x < 10; x++)
             {
-                Random fa = new Random();
-                int f = fa.Next(2, 14);
-                Random fau = new Random();
-                int p = fau.Next(1, 9);
-                await Task.Delay(150);
+                if (s.rpm > 6800)
+                {
+                    Random fa = new Random();
+                    int f = fa.Next(1, 14);
+                    Random fau = new Random();
+                    int p = fau.Next(2, 6);
+                    await Task.Delay(150);
 
-                Line objLine = new Line();
-                objLine.Stroke = System.Windows.Media.Brushes.Black;
-                objLine.Fill = System.Windows.Media.Brushes.Black;
+                    Line objLine = new Line();
+                    objLine.Stroke = System.Windows.Media.Brushes.Black;
+                    objLine.Fill = System.Windows.Media.Brushes.Black;
 
-                //start
-                objLine.X1 = h;
-                objLine.Y1 = a;
-                //end
-                h = (h + f);
-                a = (a - p);
-                objLine.X2 = h;
-                objLine.Y2 = a;
-                dynoCanvas.Children.Add(objLine);
-                Random fax = new Random();
-                int k = fax.Next(9, 15);
-                Random faxx = new Random();
-                int l = faxx.Next(1, 2);
-                await Task.Delay(150);
+                    //start
+                    objLine.X1 = h;
+                    objLine.Y1 = a;
+                    //end
+                    h = (h + f);
+                    a = (a - p);
+                    objLine.X2 = h;
+                    objLine.Y2 = a;
+                    dynoCanvas.Children.Add(objLine);
+                    Random fax = new Random();
+                    int k = fax.Next(9, 15);
+                    Random faxx = new Random();
+                    int l = faxx.Next(5, 6);
+                    await Task.Delay(150);
 
-                Line sobjeLine = new Line();
-                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
-                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+                    Line sobjeLine = new Line();
+                    sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                    sobjeLine.Fill = System.Windows.Media.Brushes.Red;
 
-                //start
-                sobjeLine.X1 = j;
-                sobjeLine.Y1 = o;
-                //end
-                o = (o + l);
-                j = (j + k);
-                sobjeLine.X2 = j;
-                sobjeLine.Y2 = o;
-                dynoCanvas.Children.Add(sobjeLine);
+                    //start
+                    sobjeLine.X1 = j;
+                    sobjeLine.Y1 = o;
+                    //end
+                    o = (o + l);
+                    j = (j + k);
+                    sobjeLine.X2 = j;
+                    sobjeLine.Y2 = o;
+                    dynoCanvas.Children.Add(sobjeLine);
+                }
+                else
+                {
+                    Random fa = new Random();
+                    int f = fa.Next(1, 14);
+                    Random fau = new Random();
+                    int p = fau.Next(2, 6);
+                    await Task.Delay(150);
+
+                    Line objLine = new Line();
+                    objLine.Stroke = System.Windows.Media.Brushes.Black;
+                    objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                    //start
+                    objLine.X1 = h;
+                    objLine.Y1 = a;
+                    //end
+                    h = (h + f);
+                    a = (a + p);
+                    objLine.X2 = h;
+                    objLine.Y2 = a;
+                    dynoCanvas.Children.Add(objLine);
+                    Random fax = new Random();
+                    int k = fax.Next(9, 15);
+                    Random faxx = new Random();
+                    int l = faxx.Next(5, 6);
+                    await Task.Delay(150);
+
+                    Line sobjeLine = new Line();
+                    sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                    sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                    //start
+                    sobjeLine.X1 = j;
+                    sobjeLine.Y1 = o;
+                    //end
+                    o = (o + l);
+                    j = (j + k);
+                    sobjeLine.X2 = j;
+                    sobjeLine.Y2 = o;
+                    dynoCanvas.Children.Add(sobjeLine);
+                }
+            }
+
+            for (int w = 0; w < 10; w++)
+            {
+                if (s.rpm > 8000)
+                {
+                    Random fa = new Random();
+                    int f = fa.Next(2, 14);
+                    Random fau = new Random();
+                    int p = fau.Next(1, 9);
+                    await Task.Delay(150);
+
+                    Line objLine = new Line();
+                    objLine.Stroke = System.Windows.Media.Brushes.Black;
+                    objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                    //start
+                    objLine.X1 = h;
+                    objLine.Y1 = a;
+                    //end
+                    h = (h + f);
+                    a = (a - p);
+                    objLine.X2 = h;
+                    objLine.Y2 = a;
+                    dynoCanvas.Children.Add(objLine);
+                    Random fax = new Random();
+                    int k = fax.Next(9, 15);
+                    Random faxx = new Random();
+                    int l = faxx.Next(1, 2);
+                    await Task.Delay(150);
+
+                    Line sobjeLine = new Line();
+                    sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                    sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                    //start
+                    sobjeLine.X1 = j;
+                    sobjeLine.Y1 = o;
+                    //end
+                    o = (o + l);
+                    j = (j + k);
+                    sobjeLine.X2 = j;
+                    sobjeLine.Y2 = o;
+                    dynoCanvas.Children.Add(sobjeLine);
+                }
+                else if (s.rpm > 6800)
+                {
+                    Random fa = new Random();
+                    int f = fa.Next(2, 14);
+                    Random fau = new Random();
+                    int p = fau.Next(1, 9);
+                    await Task.Delay(150);
+
+                    Line objLine = new Line();
+                    objLine.Stroke = System.Windows.Media.Brushes.Black;
+                    objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                    //start
+                    objLine.X1 = h;
+                    objLine.Y1 = a;
+                    //end
+                    h = (h + f);
+                    a = (a + p);
+                    objLine.X2 = h;
+                    objLine.Y2 = a;
+                    dynoCanvas.Children.Add(objLine);
+                    Random fax = new Random();
+                    int k = fax.Next(9, 15);
+                    Random faxx = new Random();
+                    int l = faxx.Next(1, 2);
+                    await Task.Delay(150);
+
+                    Line sobjeLine = new Line();
+                    sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                    sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                    //start
+                    sobjeLine.X1 = j;
+                    sobjeLine.Y1 = o;
+                    //end
+                    o = (o + l);
+                    j = (j + k);
+                    sobjeLine.X2 = j;
+                    sobjeLine.Y2 = o;
+                    dynoCanvas.Children.Add(sobjeLine);
+                }
 
             }
             for (int x = 0; x < 10; x++)
             {
-                Random fa = new Random();
-                int f = fa.Next(3, 9);
-                Random fau = new Random();
-                int p = fau.Next(1, 4);
-                await Task.Delay(150);
+                if (s.rpm > 10000)
+                {
+                    Random fa = new Random();
+                    int f = fa.Next(3, 9);
+                    Random fau = new Random();
+                    int p = fau.Next(1, 4);
+                    await Task.Delay(150);
 
-                Line objLine = new Line();
-                objLine.Stroke = System.Windows.Media.Brushes.Black;
-                objLine.Fill = System.Windows.Media.Brushes.Black;
+                    Line objLine = new Line();
+                    objLine.Stroke = System.Windows.Media.Brushes.Black;
+                    objLine.Fill = System.Windows.Media.Brushes.Black;
 
-                //start
-                objLine.X1 = h;
-                objLine.Y1 = a;
-                //end
-                h = (h + f);
-                a = (a - p);
-                objLine.X2 = h;
-                objLine.Y2 = a;
-                dynoCanvas.Children.Add(objLine);
-                Random fax = new Random();
-                int k = fax.Next(9, 15);
-                Random faxx = new Random();
-                int l = faxx.Next(0, 1);
-                await Task.Delay(150);
+                    //start
+                    objLine.X1 = h;
+                    objLine.Y1 = a;
+                    //end
+                    h = (h + f);
+                    a = (a - p);
+                    objLine.X2 = h;
+                    objLine.Y2 = a;
+                    dynoCanvas.Children.Add(objLine);
+                    /* Random fax = new Random();
+                     int k = fax.Next(9, 15);
+                     Random faxx = new Random();
+                     int l = faxx.Next(0, 1);
+                     await Task.Delay(150);
 
-                Line sobjeLine = new Line();
-                sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
-                sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+                     Line sobjeLine = new Line();
+                     sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                     sobjeLine.Fill = System.Windows.Media.Brushes.Red;
 
-                //start
-                sobjeLine.X1 = j;
-                sobjeLine.Y1 = o;
-                //end
-                o = (o + l);
-                j = (j + k);
-                sobjeLine.X2 = j;
-                sobjeLine.Y2 = o;
-                dynoCanvas.Children.Add(sobjeLine);
+                     //start
+                     sobjeLine.X1 = j;
+                     sobjeLine.Y1 = o;
+                     //end
+                     o = (o + l);
+                     j = (j + k);
+                     sobjeLine.X2 = j;
+                     sobjeLine.Y2 = o;
+                     dynoCanvas.Children.Add(sobjeLine);*/
+                }
+                else if (s.rpm > 8000)
+                {
+                    Random fa = new Random();
+                    int f = fa.Next(3, 9);
+                    Random fau = new Random();
+                    int p = fau.Next(1, 4);
+                    await Task.Delay(150);
+
+                    Line objLine = new Line();
+                    objLine.Stroke = System.Windows.Media.Brushes.Black;
+                    objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                    //start
+                    objLine.X1 = h;
+                    objLine.Y1 = a;
+                    //end
+                    h = (h + f);
+                    a = (a + p);
+                    objLine.X2 = h;
+                    objLine.Y2 = a;
+                    dynoCanvas.Children.Add(objLine);
+                }
 
             }
-            for (int x = 0; x < 30; x++)
-            {
-                Random fa = new Random();
-                int f = fa.Next(5, 12);
-                Random fau = new Random();
-                int p = fau.Next(1, 6);
-                await Task.Delay(150);
+                for (int x = 0; x < 10; x++)
+                {
+                    if (s.rpm > 12000)
+                    {
+                        Random fa = new Random();
+                        int f = fa.Next(3, 9);
+                        Random fau = new Random();
+                        int p = fau.Next(1, 4);
+                        await Task.Delay(150);
 
-                Line objLine = new Line();
-                objLine.Stroke = System.Windows.Media.Brushes.Black;
-                objLine.Fill = System.Windows.Media.Brushes.Black;
+                        Line objLine = new Line();
+                        objLine.Stroke = System.Windows.Media.Brushes.Black;
+                        objLine.Fill = System.Windows.Media.Brushes.Black;
 
-                //start
-                objLine.X1 = h;
-                objLine.Y1 = a;
-                //end
-                h = (h + f);
-                a = (a - p);
-                objLine.X2 = h;
-                objLine.Y2 = a;
-                dynoCanvas.Children.Add(objLine);
+                        //start
+                        objLine.X1 = h;
+                        objLine.Y1 = a;
+                        //end
+                        h = (h + f);
+                        a = (a - p);
+                        objLine.X2 = h;
+                        objLine.Y2 = a;
+                        dynoCanvas.Children.Add(objLine);
+                        /* Random fax = new Random();
+                         int k = fax.Next(9, 15);
+                         Random faxx = new Random();
+                         int l = faxx.Next(0, 1);
+                         await Task.Delay(150);
+
+                         Line sobjeLine = new Line();
+                         sobjeLine.Stroke = System.Windows.Media.Brushes.Red;
+                         sobjeLine.Fill = System.Windows.Media.Brushes.Red;
+
+                         //start
+                         sobjeLine.X1 = j;
+                         sobjeLine.Y1 = o;
+                         //end
+                         o = (o + l);
+                         j = (j + k);
+                         sobjeLine.X2 = j;
+                         sobjeLine.Y2 = o;
+                         dynoCanvas.Children.Add(sobjeLine);*/
+                    }
+                    else if (s.rpm > 10000)
+                    {
+                        Random fa = new Random();
+                        int f = fa.Next(3, 9);
+                        Random fau = new Random();
+                        int p = fau.Next(1, 4);
+                        await Task.Delay(150);
+
+                        Line objLine = new Line();
+                        objLine.Stroke = System.Windows.Media.Brushes.Black;
+                        objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                        //start
+                        objLine.X1 = h;
+                        objLine.Y1 = a;
+                        //end
+                        h = (h + f);
+                        a = (a + p);
+                        objLine.X2 = h;
+                        objLine.Y2 = a;
+                        dynoCanvas.Children.Add(objLine);
+                    }
+                    /* for (int q = 0; q < 30; q++)
+                     {
+                         if (s.rpm > 10000)
+                         {
+                             Random fa = new Random();
+                             int f = fa.Next(5, 12);
+                             Random fau = new Random();
+                             int p = fau.Next(1, 6);
+                             await Task.Delay(150);
+
+                             Line objLine = new Line();
+                             objLine.Stroke = System.Windows.Media.Brushes.Black;
+                             objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                             //start
+                             objLine.X1 = h;
+                             objLine.Y1 = a;
+                             //end
+                             h = (h + f);
+                             a = (a + p);
+                             objLine.X2 = h;
+                             objLine.Y2 = a;
+                             dynoCanvas.Children.Add(objLine);
+                         }
+                         else if (s.rpm >8000)
+                     {
+
+                     }
+                     */
+
+                    //}
+
+
+
+
+                    /*  for (int x = 0; x < 480; x++)
+                      {
+                         // await Task.Delay(1);
+
+                          Line objLine = new Line();
+                          objLine.Stroke = System.Windows.Media.Brushes.Black;
+                          objLine.Fill = System.Windows.Media.Brushes.Black;
+
+                          //start
+                          objLine.X1 = h;
+                          objLine.Y1 = a;
+                          //end
+                          objLine.X2 = h ;
+                          objLine.Y2 = a+1 ;
+                          dynoCanvas.Children.Add(objLine);
+                         // h = (h + 1);
+                          a = (a + 1);
+                      }*/
+
+
+                    hp.Text = s.rpm.ToString();
+                    nm.Text = s.torque.ToString();
+                }
 
             }
-
-
-  
-     
-          /*  for (int x = 0; x < 480; x++)
-            {
-               // await Task.Delay(1);
-
-                Line objLine = new Line();
-                objLine.Stroke = System.Windows.Media.Brushes.Black;
-                objLine.Fill = System.Windows.Media.Brushes.Black;
-
-                //start
-                objLine.X1 = h;
-                objLine.Y1 = a;
-                //end
-                objLine.X2 = h ;
-                objLine.Y2 = a+1 ;
-                dynoCanvas.Children.Add(objLine);
-               // h = (h + 1);
-                a = (a + 1);
-            }*/
-
-
-            hp.Text = s.rpm.ToString();
-            nm.Text = s.torque.ToString();
-        }
         
         private void stopButton_Click(object sender, RoutedEventArgs e)
         {

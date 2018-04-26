@@ -15,8 +15,12 @@
         <Border x:Name="dynoBorder" BorderBrush="#FF787878" BorderThickness="1" HorizontalAlignment="Left" Height="581" VerticalAlignment="Top" Width="1106" Margin="152,60,0,0">
             <Canvas x:Name="dynoCanvas" HorizontalAlignment="Left" Height="611" VerticalAlignment="Top" Width="1086" Margin="9,9,0,-41"/>
         </Border>
-        <TextBlock x:Name="hp" Width="100" HorizontalAlignment="Left" Margin="152,25,0,0" TextWrapping="Wrap" Text="NM:"  VerticalAlignment="Top"/>
-        <TextBlock x:Name="nm" Width="100" HorizontalAlignment="Left" Margin="257,25,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="hp" Width="100" HorizontalAlignment="Left" Margin="152,25,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top"/>
+        <TextBlock x:Name="asdasd" Width="100" HorizontalAlignment="Left" Margin="152,9,0,0" TextWrapping="Wrap" Text="RPM:"  VerticalAlignment="Top"/>
+        <TextBlock x:Name="nm" Width="100" HorizontalAlignment="Left" Margin="315,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="asdasdasd" Width="100" HorizontalAlignment="Left" Margin="315,8,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="HPY" Width="100" HorizontalAlignment="Left" Margin="517,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="HPYasdasd" Width="100" HorizontalAlignment="Left" Margin="517,10,0,0" TextWrapping="Wrap" Text="KW:" VerticalAlignment="Top"/>
         <Button Content="testinappi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="26,265,0,0" Click="Button_Click"/>
     </Grid>
 </Window>
