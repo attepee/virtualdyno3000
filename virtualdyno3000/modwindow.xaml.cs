@@ -114,7 +114,7 @@ namespace virtualdyno3000
 
         private void modifyPartButton_Click(object sender, RoutedEventArgs e)
         {
-            // Modifies parts
+            // Modifies selected part
 
             // Adds data from partGrid to nPart
             Part nPart = (Part)partGrid.SelectedItem;
@@ -139,7 +139,7 @@ namespace virtualdyno3000
 
         private void removePartButton_Click(object sender, RoutedEventArgs e)
         {
-            // Removes parts
+            // Removes selected part
 
             // Adds data from partGrid to nPart
             Part nPart = (Part)partGrid.SelectedItem;
@@ -154,7 +154,7 @@ namespace virtualdyno3000
                 }
                 else
                 {
-                    MessageBox.Show("Something went wrong, Part not removed");
+                    MessageBox.Show("Something went wrong, part not removed");
                 }
             }
             else
@@ -162,6 +162,13 @@ namespace virtualdyno3000
                 // If part is not selected
                 MessageBox.Show("Select a part");
             }
+        }
+
+        private void addPartButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Open NewPartWindow
+            NewPartWindow nPartWindow = new NewPartWindow();
+            nPartWindow.Show();
         }
     }
 }

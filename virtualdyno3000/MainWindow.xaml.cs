@@ -47,13 +47,6 @@ namespace virtualdyno3000
             nCarWindow.Show();
         }
 
-        private void addPartButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Open NewPartWindow
-            NewPartWindow nPartWindow = new NewPartWindow();
-            nPartWindow.Show();
-        }
-
         private void testCarButton_Click(object sender, RoutedEventArgs e)
         {
             // Cast selected car to nCar
@@ -100,6 +93,33 @@ namespace virtualdyno3000
         {
             // Load cars
             loadCars();
+        }
+
+        private void removeCarButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Removes selected car
+
+            // Adds data from partGrid to nPart
+            Car nCar = (Car)carGrid.SelectedItem;
+
+            if (nCar != null)
+            {
+                // If part is selected
+                if (DB.DeleteCar(nCar.id))
+                {
+                    // If removal is succesfull
+                    MessageBox.Show("Car removed.");
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong, car not removed");
+                }
+            }
+            else
+            {
+                // If part is not selected
+                MessageBox.Show("Select a part");
+            }
         }
     }
 }
