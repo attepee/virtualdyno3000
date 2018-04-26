@@ -113,6 +113,7 @@ namespace virtualdyno3000
                 block.effect = GetSpec(block.stage, 6);
                 stroke = 1;
                 m = new Mixture();
+                m.exhaustVelocity = 0.4;
             }
 
             //calculate time that we run
@@ -130,10 +131,11 @@ namespace virtualdyno3000
                         m = Suck(m);
                         break;
                     case 2:
-                        m = Squeeze(m);
+                       // m = Squeeze(m);
                         break;
                     case 3:
                         m = Bang(m);
+                        state.torque = (state.torque * (Math.Sqrt(Math.Sqrt(currentCar.engine))));
                         break;
                     case 4:
                         m = Blow(m);
@@ -150,34 +152,53 @@ namespace virtualdyno3000
                     stroke = 1;
                 }
 
+                if(state.rpm > cam.effect)
+                {
+                    state.rpm = state.rpm - state.torque * 0.7;
+                }
+                else
+                {
+                    state.rpm = state.rpm - state.torque * 0.05;
+                }
+
                 //calculating total time elapsed.
                 d = d + (m.round/2);
             }
-            //s.lastCalcTime = s.calcToTime;
-            state.lastCalcTime = 0;
+            s.lastCalcTime = s.calcToTime;
             return state;
         }
 
         private static Mixture Suck(Mixture mIn)
         {
-            m.exhaustVelocity = 1;
             Mixture mOut = mIn;
             double gasFlow = (0.0580 * inject.effect) / 100;
-            double airFlow = (0.83 * (turbo.effect*m.exhaustVelocity))/100;
+            double airFlow = 0;
+
+            if(turbo.stage !=0)
+            {
+                airFlow = (0.83 * (turbo.effect*m.exhaustVelocity))/100;
+            }
+            else
+            {
+                airFlow = 0.83 / 100;
+            }
+
 
             double rpmDiv = cam.effect / state.rpm;
             double rpmEffect = rpmDiv * (-1.2* Math.Pow(rpmDiv, 2) + 2 * rpmDiv);
 
-            if(rpmEffect < 0.32)
+            if(rpmEffect < 0.36)
             {
-                rpmEffect = 0.32;
+                rpmEffect = 0.36;
             }
 
+            mOut.air = 0;
+            mOut.gas = 0;
 
             for (double t = 0; t < m.round/2; t = t+0.01)
             {
-                mOut.air = mOut.air + (airFlow * rpmEffect);
-                mOut.gas = mOut.gas + (gasFlow * rpmEffect);
+                mOut.air = mOut.air + (airFlow * rpmEffect) * (state.rpm / 400) ;
+                mOut.gas = mOut.gas + (gasFlow * rpmEffect) * (state.rpm / 400);
             }
 
             return mOut;
@@ -186,19 +207,38 @@ namespace virtualdyno3000
         private static Mixture Squeeze(Mixture mIn)
         {
             Mixture mOut = mIn;
+            //This one is useless atm, we get compression ratio from block which is not realistic but like anything else here is..
+            //actually compression ratio is not even used maybe later
             return mOut;
         }
 
         private static Mixture Bang(Mixture mIn)
         {
             Mixture mOut = mIn;
-            const double targetAfr = 12.5;
+            const double targetAfr = 14.7;
+            double lambda = (mIn.air / mIn.gas) / targetAfr;
+            if(lambda < 0.7)
+            {
+                lambda = 0.7;
+            }
+            double combustionEfficiency = (-1.6082 + 4.6509 * lambda - 2.0746 * Math.Pow(lambda, 2));
+            double joulePerG = 44400 * combustionEfficiency;
+            double joules = joulePerG * m.gas;
+            //i think this should be energy released on combustion, well it does something. also lots of calculations that may not be needed
+            double w = joules / (m.round / 2);
+            //double meanEffectivePressure = (kW*2)/(currentCar.engine*state.rpm);
+            state.torque = w / (2 * Math.PI * (state.rpm/60)); //limiting the torque a bit by dividing it by 2
+            double acceleration = state.torque / piston.effect;
+            state.rpm = state.rpm + acceleration * 10;// also boosting rpm increase
+            m.smoke = m.gas * 3.2;
             return mOut;
         }
 
         private static Mixture Blow(Mixture mIn)
         {
             Mixture mOut = mIn;
+            //ok exhaust only for sound, also this is just lazy ass add something thing
+            m.exhaustVelocity = (m.smoke / 3) + 1;
             return mOut;
         }
 
@@ -234,19 +274,19 @@ namespace virtualdyno3000
                     switch (stage)
                     {
                         case 0:
-                            d = 1.4;
+                            d = 15;
                             break;
                         case 1:
-                            d = 1.5;
+                            d = 14;
                             break;
                         case 2:
-                            d = 1.7;
+                            d = 12;
                             break;
                         case 3:
-                            d = 1.9;
+                            d = 9;
                             break;
                         case 4:
-                            d = 2;
+                            d = 8;
                             break;
                     }
                     break;

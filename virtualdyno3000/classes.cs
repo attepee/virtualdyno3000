@@ -35,7 +35,7 @@ namespace virtualdyno3000
 
     public class State
     {
-        public double torgue { get; set; }
+        public double torque { get; set; }
         public double rpm { get; set; }
         public double lastCalcTime { get; set; }
         public double calcToTime { get; set; }

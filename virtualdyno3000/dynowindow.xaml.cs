@@ -32,7 +32,7 @@ namespace virtualdyno3000
 
         private async void startButton_Click(object sender, RoutedEventArgs e)
         {
-            s.torgue = 100;
+            s.torque = 100;
             s.rpm = 100;
             for (int i=0; i<50; i++)
             {
@@ -390,7 +390,7 @@ namespace virtualdyno3000
 
 
             hp.Text = s.rpm.ToString();
-            nm.Text = s.torgue.ToString();
+            nm.Text = s.torque.ToString();
         }
         
         private void stopButton_Click(object sender, RoutedEventArgs e)
@@ -423,7 +423,16 @@ namespace virtualdyno3000
         //tän voi sit ihan poistella kun on laskuri valmis. penkittelen tuota laskuria tällä ettei se ala jumittaa
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
+            s.rpm = 1900;
+            for (int i = 0; i < 6; i++)
+            {
+                s.calcToTime = i;
+                s = Power.Calc(s, c);
+            }
+
+
+
+            /*Stopwatch stopwatch = new Stopwatch();
             s.rpm = 100;
             s.calcToTime = 10;
 
@@ -441,10 +450,15 @@ namespace virtualdyno3000
             //00:00:00.0000017 toinen
 
             //mk3 lisätty imu tahti
-            //Elapsed	{00:00:00.9495005}	System.TimeSpan
-            //Elapsed	{00:00:00.0000079}	System.TimeSpan
+            //Elapsed	{00:00:00.9495005}	System.TimeSpan, nouspas paljon wtf
+            //Elapsed	{00:00:00.0000079}	System.TimeSpan, this is ok
 
             TimeSpan t = stopwatch.Elapsed;
+            */
+
+
+            
+
         }
     }
 }
