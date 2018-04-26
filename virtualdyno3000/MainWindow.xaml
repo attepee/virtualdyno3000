@@ -8,7 +8,7 @@
         Title="Virtualdyno3000 - Main" Height="720" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="addCarButton" Content="Add car" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="addCarButton_Click"/>
-        <Button x:Name="addPartButton" Content="Add part" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="addPartButton_Click"/>
+        <Button x:Name="removeCarButton" Content="Remove car" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="removeCarButton_Click"/>
         <Button x:Name="testCarButton" Content="Dyno" HorizontalAlignment="Left" Margin="26,110,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="testCarButton_Click"/>
         <Button x:Name="modCarButton" Content="Modifications" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="modCarButton_Click"/>
         <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="26,611,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="exitButton_Click"/>
