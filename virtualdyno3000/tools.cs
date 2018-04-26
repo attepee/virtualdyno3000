@@ -99,6 +99,8 @@ namespace virtualdyno3000
             if(currentCar != c)
             {
                 currentCar = c;
+                state.rpmPerRev = new List<double>();
+                state.torquePerRev = new List<double>();
                 cam = DB.LoadPart(c.camshaft).FirstOrDefault();
                 cam.effect = GetSpec(cam.stage, 1);
                 piston = DB.LoadPart(c.piston).FirstOrDefault();
@@ -135,7 +137,6 @@ namespace virtualdyno3000
                         break;
                     case 3:
                         m = Bang(m);
-                        state.torque = (state.torque * (Math.Sqrt(Math.Sqrt(currentCar.engine))));
                         break;
                     case 4:
                         m = Blow(m);
@@ -231,6 +232,9 @@ namespace virtualdyno3000
             double acceleration = state.torque / piston.effect;
             state.rpm = state.rpm + acceleration * 10;// also boosting rpm increase
             m.smoke = m.gas * 3.2;
+
+            state.torquePerRev.Add(state.torque * (Math.Sqrt(Math.Sqrt(currentCar.engine))));
+            state.rpmPerRev.Add(state.rpm);
             return mOut;
         }
 

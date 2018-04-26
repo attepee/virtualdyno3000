@@ -423,12 +423,10 @@ namespace virtualdyno3000
         //tän voi sit ihan poistella kun on laskuri valmis. penkittelen tuota laskuria tällä ettei se ala jumittaa
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             s.rpm = 1900;
-            for (int i = 0; i < 6; i++)
-            {
-                s.calcToTime = i;
-                s = Power.Calc(s, c);
-            }
+            s.calcToTime = 7;
+            s = Power.Calc(s, c);
 
 
 

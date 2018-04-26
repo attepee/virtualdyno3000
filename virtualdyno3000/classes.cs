@@ -40,6 +40,8 @@ namespace virtualdyno3000
         public double lastCalcTime { get; set; }
         public double calcToTime { get; set; }
         public bool broke { get; set; }
+        public List<double> torquePerRev { get; set; }
+        public List<double> rpmPerRev { get; set; }
     }
 
     public class Mixture
