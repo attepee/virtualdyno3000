@@ -21,6 +21,5 @@
         <TextBlock x:Name="asdasdasd" Width="100" HorizontalAlignment="Left" Margin="315,8,0,0" TextWrapping="Wrap" Text="NM:" VerticalAlignment="Top"/>
         <TextBlock x:Name="HPY" Width="100" HorizontalAlignment="Left" Margin="517,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <TextBlock x:Name="HPYasdasd" Width="100" HorizontalAlignment="Left" Margin="517,10,0,0" TextWrapping="Wrap" Text="KW:" VerticalAlignment="Top"/>
-        <Button Content="testinappi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="26,265,0,0" Click="Button_Click"/>
     </Grid>
 </Window>
