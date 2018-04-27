@@ -12,7 +12,7 @@ namespace virtualdyno3000
     static class DB
     {
         //create connection
-        private static MySqlConnection conn = new MySqlConnection("SERVER=mysql.labranet.jamk.fi; DATABASE=K9251_3; UID=K9251;PASSWORD=glB9PN8Nn88ragKWgo4Q2d7YFd3mRrcS;");
+        private static MySqlConnection conn = new MySqlConnection("SERVER=mysql.labranet.jamk.fi; DATABASE=K9251_3; UID=K9251;PASSWORD=;");
 
         public static List<Car> LoadCar(int id = 0)
         {
