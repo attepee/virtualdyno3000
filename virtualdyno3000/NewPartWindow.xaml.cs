@@ -55,7 +55,7 @@ namespace virtualdyno3000
                 stageBox.SelectedIndex != -1 &&
                 toughnessBox.SelectedIndex != -1)
             {
-                // Add selected data to part
+                // If fields are not empty, add selected data to part
                 newPart.manufacturer = manufacturerTextBox.Text;
                 newPart.partname = modelTextBox.Text;
                 newPart.parttype = partTypeBox.SelectedIndex + 1;

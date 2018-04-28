@@ -27,6 +27,7 @@ namespace virtualdyno3000
 
             partToModify = part;
 
+            // Set values according to selected part
             manufacturerTextBox.Text = partToModify.manufacturer;
             modelTextBox.Text = partToModify.partname;
             partTypeBox.SelectedIndex = partToModify.parttype - 1;
@@ -43,7 +44,7 @@ namespace virtualdyno3000
                 stageBox.SelectedIndex != -1 &&
                 toughnessBox.SelectedIndex != -1)
             {
-                // Add selected data to part
+                // if fields are not empty, add selected data to part
                 partToModify.manufacturer = manufacturerTextBox.Text;
                 partToModify.partname = modelTextBox.Text;
                 partToModify.parttype = partTypeBox.SelectedIndex + 1;

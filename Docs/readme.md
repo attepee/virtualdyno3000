@@ -59,11 +59,11 @@ Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pää
 
 * Ohjelma on todettu toimivaksi vain Windows 7 ja -10 -käyttöjärjestelmillä.
 * Ohjelman käyttöä varten täytyy olla joko JAMK Labranetin verkossa tai sinne on oltava VPN-yhteys Labranetin verkossa sijaitsevan tietokannan vuoksi
-* Tietokannan salasana on poistettu, jotta repositoria saatiin julkiseksi. Tästä johtuen ohjelma ei ilman muokkauksia toimi
+* Tietokannan salasana on poistettu, jotta repositoria saatiin julkiseksi. Tästä johtuen ohjelma ei toimi ilman muokkauksia koodiin
 
 ### Mitä opittiin
 
-
+Opimme, että projektia tehdessä ei kannata lähteä sokeasti koodaamaan, vaan pitäisi ensin suunnitella.
 
 ### Vastuiden ja työmäärän jakautuminen
 
@@ -75,3 +75,4 @@ Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pää
 
 ### Arvosanaehdotus
 
+Ehdotamme arvosanaa 3.

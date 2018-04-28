@@ -35,6 +35,7 @@ namespace virtualdyno3000
             bool save = true;
             if(manufacturer.Text != "" && model.Text != "" && Tools.DoubleRegex(engine.Text) != "" && Tools.IntRegex(year.Text) != "")
             {
+                // If fields are not empty, add data to car
                 c.manufacturer = manufacturer.Text;
                 c.model = model.Text;
                 c.engine = Tools.ConvertToDouble(engine.Text);
@@ -49,11 +50,13 @@ namespace virtualdyno3000
             }
             else
             {
+                // If some fields are enpty
                 save = false;
                 MessageBox.Show("check input fields!");
             }
             if(save)
             {
+                // if car is added to DB
                 if(DB.CreateCar(c))
                 {
                     this.Close();
@@ -68,6 +71,7 @@ namespace virtualdyno3000
 
         private void clear_Click(object sender, RoutedEventArgs e)
         {
+            // Clears fields
             manufacturer.Text = null;
             model.Text = null;
             engine.Text = null;
