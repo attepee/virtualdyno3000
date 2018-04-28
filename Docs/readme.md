@@ -15,6 +15,7 @@ Virtualdyno3000:lla voidaan kasata autojen kokoonpanoja eri osista ja testata ni
 #### Toteutumattomat toiminnot
 
 * Kokoonpanojen ja testitulosten tallentaminen tietokantaan
+* Autojen hajoaminen dynossa
 
 #### Käyttöohje/käyttöliittymä
 
@@ -32,33 +33,33 @@ Auton lisäämis -ikkunasta voidaan lisätä ohjelmaan uusia autoja.
 
 #####  Dyno
 
-Dynolla tehdään itse auton testaaminen. Testissä valittun auton teon mukaan piirretään käyrä ja annetaan muita tietoja auton tehosta. Tähän ikkunaan pääsee valitsemalla auton pääikkunasta ja painamalla Dyno-nappia
+Dynolla tehdään itse auton testaaminen. Testissä valittun auton tehon mukaan piirretään käyrä ja annetaan muita tietoja auton tehosta. Tähän ikkunaan pääsee valitsemalla auton pääikkunasta ja painamalla Dyno-nappia.
 
 ![](Images/dyno.JPG)
 
 #####  Auton modifikointi
 
-Auton modifikointi -ikkunassa voidaan vaihtaa auton osia. Tähän ikkunaan pääsee valitsemalla auton pääikkunasta ja painamalla Modifications-nappia
+Auton modifikointi -ikkunassa voidaan vaihtaa auton osia. Tähän ikkunaan pääsee valitsemalla auton pääikkunasta ja painamalla Modifications-nappia.
 
 ![](Images/mod.JPG)
 
 #####  Osan lisääminen
 
-Osien lisäämis -ikkunassa voidaan lisätä uusi osia ohjelmaan
+Osien lisäämis -ikkunassa voidaan lisätä uusi osia ohjelmaan.
 
 ![](Images/newpart.JPG)
 
 #####  Osan muokkaaminen
 
-Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pääsee valitsemalla osan auton modifikointi -ikkunasta ja painamalla Modify part -nappia
+Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pääsee valitsemalla osan auton modifikointi -ikkunasta ja painamalla Modify part -nappia.
 
 ![](Images/modpart.JPG)
 
 ### Ongelmat ja bugit
 
-* Toistaiseksi ohjelma on todettu toimivaksi Windows 7 ja -10 -käyttöjärjestelmillä.
+* Ohjelma on todettu toimivaksi vain Windows 7 ja -10 -käyttöjärjestelmillä.
 * Ohjelman käyttöä varten täytyy olla joko JAMK Labranetin verkossa tai sinne on oltava VPN-yhteys Labranetin verkossa sijaitsevan tietokannan vuoksi
-* Suoraan tälllaisenaan ohjelma ei toimi, koska Matin tietokannan salasana on poistettu, jotta repositoria saatiin julkiseksi
+* Tietokannan salasana on poistettu, jotta repositoria saatiin julkiseksi. Tästä johtuen ohjelma ei ilman muokkauksia toimi
 
 ### Mitä opittiin
 
