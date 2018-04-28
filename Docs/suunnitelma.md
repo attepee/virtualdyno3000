@@ -14,16 +14,17 @@ Sovellus on tarkoitettu käytettäväksi Windows-käyttöjärjestelmällä. Sove
 
 #### Toiminnot
 
+* Autojen lisääminen
 * Kokoonpanon kasaaminen valittavissa olevista osista
 * Kasatun kokoonpanon testaaminen
 * Grafiikan piirtäminen testituloksen mukaan
 * Kokoonpanojen ja testitulosten tallentaminen tietokantaan
 
-![usecase](Images/usecase.png)
+![](Images/usecase.png)
 
 #### Käsitemalli
 
-![Käsitemalli](Images/kasitemalli.png)
+![](Images/kasitemalli.png)
 
 ### Tekijät ja työnjako
 
