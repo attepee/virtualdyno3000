@@ -55,6 +55,16 @@ Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pää
 
 ![](Images/modpart.JPG)
 
+### Tietokanta
+
+Auto-taulu
+
+![](Images/cartable.png)
+
+Osa-taulu
+
+![)(Images/tuningtable.png)
+
 ### Ongelmat ja bugit
 
 * Ohjelma on todettu toimivaksi vain Windows 7 ja -10 -käyttöjärjestelmillä.
