@@ -65,6 +65,14 @@ Osa-taulu
 
 ![](Images/tuningtable.PNG)
 
+### Luokat
+
+![](Images/class1.PNG)
+
+![](Images/class2.PNG)
+
+![](Images/class3.PNG)
+
 ### Ongelmat ja bugit
 
 * Ohjelma on todettu toimivaksi vain Windows 7 ja -10 -käyttöjärjestelmillä.
