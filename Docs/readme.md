@@ -59,11 +59,11 @@ Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pää
 
 Auto-taulu
 
-![](Images/cartable.png)
+![](Images/cartable.PNG)
 
 Osa-taulu
 
-![)(Images/tuningtable.png)
+![](Images/tuningtable.PNG)
 
 ### Ongelmat ja bugit
 
