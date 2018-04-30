@@ -63,15 +63,15 @@ Osan muokkaamis -ikkunassa voidaan muokata osien tietoja. Tähän ikkunaan pää
 
 ### Mitä opittiin
 
-Opimme, että projektia tehdessä ei kannata lähteä sokeasti koodaamaan, vaan pitäisi ensin suunnitella.
+Opimme, että projektia tehdessä ei kannata lähteä sokeasti koodaamaan, vaan pitäisi ensin suunnitella. Opimme myös WPF-kirjaston ja Gitin käyttöä sekä ryhmässä koodaamista.
 
 ### Vastuiden ja työmäärän jakautuminen
 
 | Tekijä                                                     | Vastuu                                                                   |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Matti Aho](https://github.com/matti644), K9251            | Tietokantayhteys, Dynon logiikka                                         |
-| [Niklas Hietaranta](https://github.com/niklashieta), K9279 | Testigrafiikka, DynoWindow                                               |
-| [Atte Pekkarinen](https://github.com/attepee), L5566       | Dokumentaatio, MainWindow, NewPartWindow, NewCarWindow, ModyfyPartWindow |
+| [Matti Aho](https://github.com/matti644), K9251            | Tietokantayhteys, Dynon logiikka, testigrafiikka                         |
+| [Niklas Hietaranta](https://github.com/niklashieta), K9279 | Testigrafiikka                                                           |
+| [Atte Pekkarinen](https://github.com/attepee), L5566       | Dokumentaatio, ikkunat                                                   |
 
 ### Arvosanaehdotus
 
