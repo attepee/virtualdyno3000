@@ -14,7 +14,7 @@ Virtualdyno3000:lla voidaan kasata autojen kokoonpanoja eri osista ja testata ni
 
 #### Toteutumattomat toiminnot
 
-* Kokoonpanojen ja testitulosten tallentaminen tietokantaan
+* Testitulosten tallentaminen tietokantaan
 * Autojen hajoaminen dynossa
 
 #### Käyttöohje/käyttöliittymä
